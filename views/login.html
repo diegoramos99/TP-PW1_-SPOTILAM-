@@ -12,49 +12,27 @@
 </head>
 
 <body>
-    <section>
+    <section class="login-register-container">
         <form action="#" method="post" class="login">
             <div>
                 <label>Usuario</label> <br>
-                <input type="text" placeholder=" Name" required />
+                <input type="text" placeholder=" Name"  value="" required  id="loginUsuario" class="Usuario"/>
             </div>
             <div>
                 <label>Contraseña</label> <br>
-                <input type="text" placeholder=" ********" required />
+                <input type="password" placeholder=" ********" value="" id="loginContracenia" required />
             </div>
             <div class="btn-container">
-            <button class="buttonLog">
-                <a class="linkRegister link" href="../index.html">Iniciar sesión</a> 
-            </button>
-            <a href="register.html" class="linkRegister resgistrarse ">Registrarme</a>
-        </div>
+                <a href="../views/register.html" class="linkRegister resgistrarse ">Registrarme</a>
+            </div>
         </form>
+        <button type="submit" id="iniciarSecion" class="btn">
+           iniciar secion
+        </button>
     </section>
 
 
-    <!-- <footer class="footer">
-        <div class="footer-content">
-            <div class="participants">
-                <h3>Participantes del Proyecto</h3>
-                <ul>
-                    <li>Diego Ramos // Santiago Woscoff</li>
-                    <li>Ezequiel Mendoza // Elvia Medina</li>
-                    <li>Mora Castelli Garaycochea</li>
-                </ul>
-            </div>
-            <nav class="footer-nav">
-                <h3>Navegación</h3>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Programacion Web 1. Todos los derechos reservados.</p>
-        </div>
-    </footer> -->
+  
     
     <section class="item5 caja footer">
         <footer class="footer_container">
@@ -62,9 +40,8 @@
                 <div class="participants">
                     <h3>Participantes del Proyecto</h3>
                     <ul>
-                        <li>Diego Ramos // Santiago Woscoff</li>
-                        <li>Ezequiel Mendoza // Elvia Medina</li>
-                        <li>Mora Castelli Garaycochea</li>
+                        <li>Diego Ramos</li>
+                        <li>42.046.892</li>
                     </ul>
                 </div>
                 <nav class="footer-nav">
@@ -81,6 +58,8 @@
             </div>
         </footer>
     </section>
+    <script src="../JS/iniciarSecion.js"></script>
+
 </body>
 
 </html>

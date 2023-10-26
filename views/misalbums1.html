@@ -7,6 +7,7 @@
     <!-- <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/buscar.css"> -->
     <link rel="stylesheet" href="../css/index1.css">
+    <link rel="stylesheet" href="../css/misalbums.css">
     <title>Mis albums</title>
 </head>
 
@@ -20,7 +21,7 @@
                 <div class="header-perfil">
                     <div class="header-perfil_usuario">
                         <div class="usuario"><h3>usuario</h3></div>
-                        <div class="cerar-sesion"><a href="../views/login.html">cerrar sesion</a></div>
+                        <div class="cerar-sesion"><a id="cerarSecion" href="../views/login.html">cerrar sesion</a></div>
                     </div>
                     <div class="header-perfil_contenedor-img">
                         <a href="../views/perfil.html">  <img src="../assets/foto-usuario.webp" alt=""></a>
@@ -56,41 +57,70 @@
         <section class="item3 caja main">
 
             <main class="main_container">
-                <section class="albumes-container">
-                    <div class="albumes-container_container"><div class="imgContainer">
-                        <a href="../views/musicaSonando1.html"> <img src="../assets/ramonesAlbum.jpg" alt=""
-                                class="imgAlbumes"></a>
-                                <img src="../assets/estrellaAmarilla.png" alt="" class="favAlbumSonando">
-                    </div></div>
-                    
-                    <div class="albumes-container_container"><div class="imgContainer">
-                        <a href="../views/musicaSonando1.html"> <img src="../assets/beatlesAlbum.jpg" alt=""
-                                class="imgAlbumes"></a><img src="../assets/estrellaAmarilla.png" alt="" class="favAlbumSonando">
-                    </div></div>
-                    <div class="albumes-container_container"><div class="imgContainer">
-                        <a href="../views/musicaSonando1.html"> <img src="../assets/queenAlbum.jpeg" alt=""
-                                class="imgAlbumes"></a><img src="../assets/estrellaAmarilla.png" alt="" class="favAlbumSonando">
-                    </div></div>
-                    <div class="albumes-container_container"><div class="imgContainer">
-                        <a href="../views/musicaSonando1.html"> <img src="../assets/redhotAlbum.jpg" alt=""
-                                class="imgAlbumes"></a><img src="../assets/estrellaAmarilla.png" alt="" class="favAlbumSonando">
-                    </div></div>
-                    <div class="albumes-container_container"><div class="imgContainer">
-                        <a href="../views/musicaSonando1.html"> <img src="../assets/fooFightersAlbum.jpg" alt=""
-                                class="imgAlbumes"></a><img src="../assets/estrellaAmarilla.png" alt="" class="favAlbumSonando">
-                    </div></div>
-                    <div class="albumes-container_container"><div class="imgContainer">
-                        <a href="../views/musicaSonando1.html"> <img src="../assets/pinkFloydAlbum.svg" alt=""
-                                class="imgAlbumes"></a><img src="../assets/estrellaAmarilla.png" alt="" class="favAlbumSonando">
-                    </div></div>
-                    <div class="albumes-container_container"><div class="imgContainer">
-                        <a href="../views/musicaSonando1.html"> <img src="../assets/pinkFloydAlbum.svg" alt=""
-                                class="imgAlbumes"></a><img src="../assets/estrellaAmarilla.png" alt="" class="favAlbumSonando">
-                    </div></div>
-                    <div class="albumes-container_container"><div class="imgContainer">
-                        <a href="../views/musicaSonando1.html"> <img src="../assets/pinkFloydAlbum.svg" alt=""
-                                class="imgAlbumes"></a><img src="../assets/estrellaAmarilla.png" alt="" class="favAlbumSonando">
-                                </div>
+                <section id="albumes-container" class="albumes-container">
+                    <div data-alt="los ramones" class="albumes-container_container">
+                        <div class="imgContainer">
+                            <a href="../views/musicaSonando1.html"> <img src="../assets/ramonesAlbum.jpg" alt=""
+                                    class="imgAlbumes"></a>
+                            <img src="../assets/estrella1.png" alt="los ramones" name="los ramones"
+                                class="favAlbumSonando ">
+                        </div>
+                    </div>
+                    <div data-alt="los beatles" class="albumes-container_container">
+                        <div class="imgContainer">
+                            <a href="../views/musicaSonando1.html"> <img src="../assets/beatlesAlbum.jpg" alt=""
+                                    class="imgAlbumes"></a><img src="../assets/estrella1.png" alt="los beatles"
+                                class="favAlbumSonando">
+                        </div>
+                    </div>
+                    <div data-alt="queen" class="albumes-container_container">
+                        <div class="imgContainer">
+                            <a href="../views/musicaSonando1.html"> <img src="../assets/queenAlbum.jpeg" alt=""
+                                    class="imgAlbumes"></a><img src="../assets/estrella1.png" alt="queen"
+                                class="favAlbumSonando">
+                        </div>
+                    </div>
+                    <div data-alt="redhotChilliePappers" class="albumes-container_container">
+                        <div class="imgContainer">
+                            <a href="../views/musicaSonando1.html"> <img src="../assets/redhotAlbum.jpg" alt=""
+                                    class="imgAlbumes"></a><img src="../assets/estrella1.png" alt="redhotChilliePappers"
+                                class="favAlbumSonando">
+                        </div>
+                    </div>
+                    <div data-alt="fooFighters" class="albumes-container_container">
+                        <div class="imgContainer">
+                            <a href="../views/musicaSonando1.html"> <img src="../assets/fooFightersAlbum.jpg" alt=""
+                                    class="imgAlbumes"></a><img src="../assets/estrella1.png" alt="fooFighters"
+                                class="favAlbumSonando">
+                        </div>
+                    </div>
+                    <div data-alt="pinkFloyd" class="albumes-container_container">
+                        <div class="imgContainer">
+                            <a href="../views/musicaSonando1.html"> <img src="../assets/pinkFloydAlbum.svg" alt=""
+                                    class="imgAlbumes"></a><img src="../assets/estrella1.png" alt="pinkFloyd"
+                                class="favAlbumSonando">
+                        </div>
+                    </div>
+                    <div data-alt="AD/DC" class="albumes-container_container">
+                        <div class="imgContainer">
+                            <a href="../views/musicaSonando1.html"> <img src="../assets/AC_DC.jpg" alt=""
+                                    class="imgAlbumes"></a><img src="../assets/estrella1.png" alt="AD/DC"
+                                class="favAlbumSonando">
+                        </div>
+                    </div>
+                    <div data-alt="molotov" class="albumes-container_container">
+                        <div class="imgContainer">
+                            <a href="../views/musicaSonando1.html"> <img src="../assets/molotov.jpg" alt=""
+                                    class="imgAlbumes"></a><img src="../assets/estrella1.png" alt="molotov"
+                                class="favAlbumSonando">
+                        </div>
+                    </div>
+                    <div data-alt="catupecu" class="albumes-container_container">
+                        <div class="imgContainer">
+                            <a href="../views/musicaSonando1.html"> <img src="../assets/canciones/catupecu.png" alt=""
+                                    class="imgAlbumes"></a><img src="../assets/estrella1.png" alt="catupecu"
+                                class="favAlbumSonando">
+                        </div>
                     </div>
                 </section>
                 <!-- <audio controls class="audio">
@@ -98,7 +128,7 @@
                 Tu navegador no soporta el elemento de audio.
             </audio> -->
                 <audio controls class="audio">
-                    <source src="mi_audio.mp3" type="audio/mpeg">
+                    <source src="" type="audio/mpeg">
                 </audio>
             </main>
         </section>
@@ -124,9 +154,8 @@
                     <div class="participants">
                         <h3>Participantes del Proyecto</h3>
                         <ul>
-                            <li>Diego Ramos // Santiago Woscoff</li>
-                            <li>Ezequiel Mendoza // Elvia Medina</li>
-                            <li>Mora Castelli Garaycochea</li>
+                            <li>Diego Ramos</li>
+                            <li>42.046.892</li>
                         </ul>
                     </div>
                     <nav class="footer-nav">
@@ -146,6 +175,8 @@
 
 
     </div>
+    <script src="../JS/misalbums.js"></script>
+
 </body>
 
 </html>

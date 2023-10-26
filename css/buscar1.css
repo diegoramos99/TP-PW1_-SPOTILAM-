@@ -6,3 +6,13 @@
     width: 100%;
     border-radius:20px ;
 }
+#albumes-container{
+    border: 10px solid red;
+    /* height: 70vh; */
+    width: 70vw ;
+    /* overflow: scroll; */
+}
+.albumes-container_container{
+    opacity: 1;
+    transition: opacity 1s;
+}

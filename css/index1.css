@@ -243,6 +243,12 @@ text-decoration: none;
    object-fit: contain;
    
 }
+.albumes-container .imgContainer .favAlbumSonando:hover{
+   cursor: pointer;
+   border-radius: 100%;
+   box-shadow: 0px 0px 20px red;
+   
+}
 .main_container audio{
     width: 100%;
 }
@@ -455,4 +461,9 @@ text-decoration: none;
    .footer_container{
     margin-top:1rem ;
    }
+}
+.fondo{
+    
+    background-color: rgb(255, 191, 0);
+    border-radius: 100%;
 }

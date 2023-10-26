@@ -19,7 +19,7 @@
             <div class="header-perfil">
                 <div class="header-perfil_usuario">
                     <div class="usuario"><h3>usuario</h3></div>
-                    <div class="cerar-sesion"><a href="../views/login.html">cerrar sesion</a></div>
+                    <div class="cerar-sesion"><a id="cerarSecion" href="../views/login.html">cerrar sesion</a></div>
                 </div>
                 <div class="header-perfil_contenedor-img">
                     <a href="../views/perfil.html">  <img src="../assets/foto-usuario.webp" alt=""></a>
@@ -32,27 +32,28 @@
         <section class="form-contenedor">
             <form action="">
                 <p><label class="label" for="nombre">nombre</label>
-                    <input id="nombre" type="text" placeholder="ingrese su nombre">
+                    <input id="nombre" type="text" placeholder="ingrese su nombre" required>
                 </p>
                 <p> <label class="label" for="contraceña">contraceña</label>
-                    <input id="contraceña" type="password" placeholder="ingrese una contraceña">
+                    <input id="contraceña" type="password" placeholder="ingrese una contraceña" required>
                 </p>
                 <p><label class="label" for="repetir-contraceña">repetir-contraceña</label>
-                    <input id="repetir-contraceña" type="password" placeholder="repita contraceña">
+                    <input id="repetirContraceña" type="password" placeholder="repita contraceña" required>
                 </p>
-                <p><label class="label" for="fecha-nacimiento">fecha de nacimiento</label>
-                    <input id="fecha-nacimiento" type="date">
+                <p>
+                    <label>Fecha de Nacimiento</label> 
+                    <input id="fechaNac"  placeholder="00/00/0000" type="date" required>
                 </p>
                 <p><label class="label" for="email">email</label>
-                    <input id="email" type="email" placeholder="ingrese email">
+                    <input id="email" type="email" placeholder="ingrese email" required>
                 </p>
                 <div class="contenedor-btn">
                     <button class="button"><a class="link" href="premium.html">premium</a></button>
                     <button class="button"><a class="link" href="login.html">elimina usuario</a></button>
                 </div>
                 <div class="botones">
-                    <button class="btn"><a class="link" href="../index.html">Volver al home</a></button>
-                    <button class="btn"><a class="link" href="../views/perfil.html">Guardar</a></button>
+                    <button class="btn"><a id="eliminarUsuario" class="link" href="../index.html">Volver al home</a></button>
+                    <button class="btn"><a id="guardar" class="link" href="../views/perfil.html">Guardar</a></button>
                 </div>
             </form>
         </section>
@@ -66,9 +67,8 @@
                 <div class="participants">
                     <h3>Participantes del Proyecto</h3>
                     <ul>
-                        <li>Diego Ramos // Santiago Woscoff</li>
-                        <li>Ezequiel Mendoza // Elvia Medina</li>
-                        <li>Mora Castelli Garaycochea</li>
+                        <li>Diego Ramos</li>
+                        <li>42.046.892</li>
                     </ul>
                 </div>
                 <nav class="footer-nav">
@@ -85,6 +85,8 @@
             </div>
         </footer>
     </section>
+    <script src="../JS/perfil.js"></script>
+
 </body>
 
 </html>

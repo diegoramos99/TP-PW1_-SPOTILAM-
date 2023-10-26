@@ -11,32 +11,38 @@
 </head>
 
 <body>
-    <section>
+    <section class="login-register-container">
         <form action="#" method="post" class="login">
             <div>
-                <label>Usuario</label><br>
-                <input type="text" placeholder=" Name">
+                <label id="label">Usuario</label>
+                <input id="usuario" type="text" placeholder=" Name" value="" required >
             </div>
             <div>
-                <label>Contraseña</label> <br>
-                <input type="text" placeholder=" ********">
+                <label>Contraseña</label>
+                <input id="contraceña" type="password" placeholder=" ********" required>
             </div>
             <div>
-                <label>Repetir Contraseña</label> <br>
-                <input type="text" placeholder=" ********">
+                <label>Repetir Contraseña</label>
+                <input id="repetirContraceña" type="password" placeholder=" ********" required>
             </div>
             <div>
-                <label>Email</label> <br>
-                <input type="email" placeholder=" example@email.com">
+                <label>Email</label> 
+                <input id="email" type="email" placeholder=" example@email.com" required>
             </div>
             <div>
-                <label>Fecha de Nacimiento</label> <br>
-                <input type="text" placeholder=" 00/00/0000">
+                <label>Fecha de Nacimiento</label> 
+                <input id="fechaNac" type="date" placeholder=" 00/00/0000" required>
             </div>
+            
+            
+            
             <!-- <button class="buttonLog">Registrarme</button> -->
             <a href="login.html" class="linkRegister">Iniciar Sesión</a>
             <a href="../views/premiumSinLogin.html" class="linkPremium">Premium</a>
         </form>
+        <button  onclick="location.href='../views/login.html'" id="registrarme" type="submit" class="btn" name="btn" >registrarme </button>
+
+
     </section>
 
 
@@ -46,9 +52,8 @@
                 <div class="participants">
                     <h3>Participantes del Proyecto</h3>
                     <ul>
-                        <li>Diego Ramos // Santiago Woscoff</li>
-                        <li>Ezequiel Mendoza // Elvia Medina</li>
-                        <li>Mora Castelli Garaycochea</li>
+                        <li>Diego Ramos</li>
+                        <li>42.046.892</li>
                     </ul>
                 </div>
                 <nav class="footer-nav">
@@ -65,6 +70,8 @@
             </div>
         </footer>
     </section>
+       <script src="../JS/register.js"></script>
+
 </body>
 
 </html>

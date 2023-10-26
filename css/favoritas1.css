@@ -59,7 +59,7 @@ height: 5vh;
     height: 160%;
     display: flex;
     flex-direction: column;
-  
+    color: white;
 }
 .columnas .contenedor-datos{
     /* border: 5px solid rgb(0, 166, 255); */
