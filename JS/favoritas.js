@@ -26,19 +26,43 @@ cerarSecion.addEventListener("click", function () {
 for (const usuario of usuariosRegistrados) {
     if (usuario.enLinea == true) {
         const listaAlbumsFav=usuario.albumsFav
-        const albumes=document.querySelectorAll(".nombre-album")
+        // const albumes=document.querySelectorAll(".nombre-album")
         const contenedorDatosAlbums=document.querySelector(".contenedor-datos-albums")
         listaAlbumsFav.forEach(element => {
-           const etiquetaDOM=`<div class="nombre-album casilla"><img class="estrellaAmarilla fondo"
+           const etiquetaAlbumDOM=`<div class="nombre-album casilla"><img class="estrellaAmarilla fondo"
                                 src="../assets/estrella1.png" alt="${element}">
                                 <div class="nombre_album">${element}</div>
                                 </div>`
-            contenedorDatosAlbums.innerHTML+=etiquetaDOM
-        })
+            contenedorDatosAlbums.innerHTML+=etiquetaAlbumDOM
+
+
+        });
+        // agrega a la vista favoritos tadas las canciones que contenga el array de canciones que este dentro del objeto Album cuyo nombre coincida 
+        const listaCancionesFav=usuario.cancionesFav 
+        const contenedorIconos=document.querySelector(".contenedor-datos-icono") 
+        const contenedorCanciones=document.querySelector(".contenedor-datos-nombre") 
+        const contenedorTiempo=document.querySelector(".contenedor-datos-tiempo") 
+        const contenedorReproduccion=document.querySelector(".contenedor-datos-reproduccion") 
+        console.log(listaCancionesFav);
+        listaCancionesFav.forEach(element => {
+            const etiquetaCancionDOM=`<div class="nombre-cancion casilla"><img class="estrellaAmarilla fondo"
+            src="../assets/estrella1.png" alt="${element}">
+                <div class="nombre">${element}</div>
+           </div>`
+           const etiquetaIconoDOM=` <div class="icono casilla"><img class="img-reproducir" src="../assets/play.png" alt="">
+           </div>`
+           const etiquetaTiempo=`  <div class="tiempo-duracion casilla">4:23</div>`
+           const etiquetareproduccion=`<div class="cantidad-reproducciones casilla">9854</div>`
+            contenedorCanciones.innerHTML+=etiquetaCancionDOM
+            contenedorIconos.innerHTML+=etiquetaIconoDOM
+            contenedorTiempo.innerHTML+=etiquetaTiempo
+            contenedorReproduccion.innerHTML+=etiquetareproduccion
+    })
 
        
         break
     }
+    localStorage.setItem("usuarios",JSON.stringify(usuariosRegistrados) )
 }
 // }
 // agregarAlbumes()
@@ -51,8 +75,10 @@ estrelaBuscada.forEach(element => {
         for (const usuario of usuariosRegistradoss) {
             if (usuario.enLinea == true) {
         const listaAlbumsFav=usuario.albumsFav
+        const listaCancionesFav=usuario.cancionesFav
         const valorestrella=this.alt
         console.log(listaAlbumsFav);
+        console.log(valorestrella);
         element.classList.remove("fondo")
         listaAlbumsFav.forEach(function (element,index) {
             console.log(index);
@@ -63,19 +89,19 @@ estrelaBuscada.forEach(element => {
                 location.reload()
             }
         });
+        listaCancionesFav.forEach(function (element,index) {
+            console.log(index);
+            if (element===valorestrella) {
+                console.log(index);
+                listaCancionesFav.splice(index,1)
+                localStorage.setItem("usuarios",JSON.stringify( usuariosRegistradoss));
+                location.reload()
+            }
+        });
     }
 }
     }
     )
 }
 )
-
-// saca de favoritas si hse hace click en la estrella
-// for (const usuario of usuariosRegistrados) {
-//     if (usuario.enLinea == true) {
-//         const albumsFav=usuario.albumsFav
-       
-//     }
-// }
-//agrega a la vista favoritos las canciones que tengo marcadas como favorito en el localstorage
 

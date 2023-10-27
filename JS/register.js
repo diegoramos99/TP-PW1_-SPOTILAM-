@@ -16,7 +16,7 @@ function almacenarUsuarioNuevo() {
 const repetirContraceña=document.querySelector("#repetirContraceña").value;
 const email=document.querySelector("#email").value;
 const fechaNac=document.querySelector("#fechaNac").value;
-const cancionesFav=["asd",];
+const cancionesFav=[];
 const albumsFav=[];
 const enLinea=false
 const usuarioNuevo={

@@ -36,10 +36,10 @@ const albumes = Array.from(albumesDelDom)
 function borrarAlbums() {
 
     if (contenedorAlbums) {
-        console.log("entro al if");
+    
         while (contenedorAlbums.firstChild) {
             contenedorAlbums.removeChild(contenedorAlbums.firstChild)
-            console.log("entro al while");
+          
         }
     }
 }
