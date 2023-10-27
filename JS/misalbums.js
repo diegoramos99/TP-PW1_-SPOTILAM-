@@ -31,6 +31,8 @@ const contenedorAlbums = document.querySelector("#albumes-container");
 const albumesDelDom = document.querySelectorAll(".albumes-container_container");
 const albumes = Array.from(albumesDelDom)
 
+
+
 function borrarAlbums() {
 
     if (contenedorAlbums) {

@@ -24,7 +24,7 @@ cerarSecion.addEventListener("click", function () {
     }
 )
 
-
+// busca entre todos los albumes los que coincidan con la buscçqueda del input y agrega los albumes que tienecoincidencias
 const buscador = document.querySelector("#buscador");
 const contenedorAlbums = document.querySelector("#albumes-container");
 const albumesDelDom = document.querySelectorAll(".albumes-container_container");
@@ -97,6 +97,7 @@ estrella.addEventListener("click",function () {
         
         if (usuario.enLinea==true) {
             const album=this.alt
+            
             let albumFav=usuario.albumsFav
             const contieneAlbum=albumFav.some((albumbuscado)=>albumbuscado===album)
            
