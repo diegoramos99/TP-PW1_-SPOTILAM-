@@ -19,6 +19,7 @@ const fechaNac=document.querySelector("#fechaNac").value;
 const cancionesFav=[];
 const albumsFav=[];
 const enLinea=false
+
 const usuarioNuevo={
     usuario:usuario,
     nuevaContraceña:nuevaContraceña,
@@ -27,7 +28,8 @@ const usuarioNuevo={
     fechaNac:fechaNac,
     cancionesFav:cancionesFav,
     albumsFav:albumsFav,
-    enLinea:enLinea
+    enLinea:enLinea,
+    musicaActual:""
 }
 listaDeUsuariosLocalStorage.push(usuarioNuevo)
 

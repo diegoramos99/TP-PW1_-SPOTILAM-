@@ -50,8 +50,8 @@ const coleccionDeAlbumes = [
         canciones: ["pinkFloyd:cancion1", "pinkFloyd:cancion2", "pinkFloyd:cancion3", "pinkFloyd:cancion4", "pinkFloyd:cancion5", "pinkFloyd:cancion6", "pinkFloyd:cancion7", "pinkFloyd:cancion8", "pinkFloyd:cancion9"]
     },
     album6 = {
-        nombre: "AC/DC",
-        canciones: ["AC/DC:cancion1", "AC/DC:cancion2", "AC/DC:cancion3", "AC/DC:cancion4", "AC/DC:cancion5", "AC/DC:cancion6", "AC/DC:cancion7", "AC/DC:cancion8", "AC/DC:cancion9"]
+        nombre: "AC_DC",
+        canciones: ["AC_DC:cancion1", "AC_DC:cancion2", "AC_DC:cancion3", "AC_DC:cancion4", "AC_DC:cancion5", "AC_DC:cancion6", "AC_DC:cancion7", "AC_DC:cancion8", "AC_DC:cancion9"]
     },
     album7 = {
         nombre: "molotov",
@@ -147,6 +147,71 @@ estrella.forEach(function (estrella) {
     })
 
 })
-// no pierde el estilo la estrella al recargar la pagina
 
 
+// al hacer click agrega al local storage la cancion que suena ,y agrega al aside la imagen del album que suena
+
+const imgContainersonando=document.querySelector(".imgContainerSonando")
+const albumText=document.querySelector(".albumText")
+const nombre_cancion=document.querySelectorAll(".nombre_cancion")
+
+nombre_cancion.forEach(element => {
+    element.addEventListener("click",function(){
+        for (const usuario of usuariosRegistrados) {
+
+            if (usuario.enLinea == true) {
+
+                const cancion=element.textContent
+                usuario.musicaActual=cancion
+                
+                console.log(usuario.musicaActual)
+                const etiquetaAlbumSonando=`<div class="imgContainerSonando">
+                <img src="../assets/${valorAlbumBuscado}.jpg" alt="" class="albumSonando">
+                <img src="../assets/estrella1.png" alt="" class="favAlbumSonando">
+            </div>`
+                
+                    imgContainersonando.innerHTML=etiquetaAlbumSonando
+            }
+        }
+        localStorage.setItem("usuarios", JSON.stringify(usuariosRegistrados));
+  
+        
+    })
+});
+
+// agrega la imagen al aside del album de la cancion  que tenga guardada en el localstoraje
+
+
+
+for (const usuario of usuariosRegistrados) {
+
+    if (usuario.enLinea == true) {
+        const musicaActual=usuario.musicaActual
+        const arrayDescopuesto=musicaActual.split(":")
+        console.log(arrayDescopuesto);
+        if (usuario.musicaActual==="") {
+            console.log("Asd");
+        }else{
+            
+        const etiquetaAlbumSonando=`<div class="imgContainerSonando">
+        <img src="../assets/${arrayDescopuesto[0]}.jpg" alt="" class="albumSonando">
+        <img src="../../assets/estrellaAmarilla.png" alt="" class="favAlbumSonando">
+    </div>
+    <div>
+        <p class="albumText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit omnis quaerat, eum
+            asperiores
+            nesciunt excepturi quae necessitatibus perspiciatis, voluptatibus veritatis amet, optio eos!
+            Reprehenderit a
+            ipsum fugit, vero expedita maiores.</p>
+    </div>`
+    imgContainersonando.innerHTML=etiquetaAlbumSonando
+}
+const imgAlbumSonando=document.querySelector(".imgContainerSonando")
+imgAlbumSonando.addEventListener("click",function(){
+    imgContainersonando.innerHTML=""
+    console.log("borrado");
+    usuario.musicaActual=""
+    localStorage.setItem("usuarios",JSON.stringify( usuariosRegistrados));
+})
+    }
+}
