@@ -20,12 +20,13 @@ function buscarUsuario() {
 
         if (usuario.usuario===usuarioValue&&usuario.nuevaContraceña===nuevaContraceña) {
             usuario.enLinea=true;
-
+            console.log("usuario correcto");
             window.location.href = "../index.html"
             break
             }
-            alert("nombre o usuario incorrecto")
+            console.log("usuarioIncorecto");
         }
+        alert("nombre o usuario incorrecto")
             localStorage.setItem("usuarios",JSON.stringify( usuariosRegistrados));
 }
 

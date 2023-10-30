@@ -34,9 +34,23 @@ body {
     /* border: 5px solid white;  */
     height: 80vh;
     display: flex;
+    flex-direction: column;
     margin: auto;
+    justify-content: center;
+    align-items: center;
 }
-
+dialog{
+    border: 10px ridge brown;
+    margin: auto;
+    text-align: center;
+    height: 20%;
+    width: 50%;
+    background-color: #c6ac8f;
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
 .form-contenedor form {
     /* border: 5px solid white; */
 

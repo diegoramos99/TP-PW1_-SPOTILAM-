@@ -29,7 +29,8 @@ const usuarioNuevo={
     cancionesFav:cancionesFav,
     albumsFav:albumsFav,
     enLinea:enLinea,
-    musicaActual:""
+    musicaActual:"",
+    tienePremium:false
 }
 listaDeUsuariosLocalStorage.push(usuarioNuevo)
 
@@ -39,4 +40,4 @@ localStorage.setItem("usuarios",JSON.stringify(listaDeUsuariosLocalStorage));
 
 registrarme.addEventListener('click',almacenarUsuarioNuevo)
 
-// localStorage.clear();
+    // localStorage.clear()

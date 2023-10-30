@@ -20,7 +20,7 @@
                 <div class="header-perfil">
                     <div class="header-perfil_usuario">
                         <div class="usuario"><h3>usuario</h3></div>
-                        <div class="cerar-sesion"><a href="../views/login.html">cerrar sesion</a></div>
+                        <div class="cerar-sesion"><a id="cerarSecion" href="../views/login.html">cerrar sesion</a></div>
                     </div>
                     <div class="header-perfil_contenedor-img">
                         <a href="../views/perfil.html">  <img src="../assets/foto-usuario.webp" alt=""></a>
@@ -29,6 +29,7 @@
 
             </header>
         </section>
+        <form action="../views/pagarSinLogin.html" method="get">
         <section class="planes">
             <article class="item11">
                 <img src="..\assets\LogosPremium\plan mensual.png" alt="planMensual">
@@ -40,12 +41,12 @@
                     <br>
                 </h3>
                 <h4>$1.330 ARS</h4>
-                <input type="radio" name="plan">
+                <input type="radio" name="plan" value="planMensual">
                 <br>
             </article>
 
             <article class="item2">
-                <img src="..\assets\LogosPremium\plan anual.png" alt="planAnual">
+                <img src="..\assets\LogosPremium\plan anual.png" value="planAnual">
                 <h3>
                     Con este plan podra abonar anualmente un PLAN fijo para su cuenta privada o para su cuenta familiar
                     tambien!
@@ -54,12 +55,12 @@
                     <br>
                 </h3>
                 <h4>$2.000 ARS</h4>
-                <input type="radio" name="plan">
+                <input type="radio" name="plan" value="planAnual">
                 <br>
             </article>
 
             <article class="item3">
-                <img src="..\assets\LogosPremium\plan infinito.png" alt="planInfinito">
+                <img src="..\assets\LogosPremium\plan infinito.png" value="planInfinito">
                 <h3>
                     Con este plan podra abonar una unica vez en un precio fijo su cuenta privada o su cuenta familiar
                     tambien!
@@ -68,15 +69,17 @@
                     <br>
                 </h3>
                 <h4>$8.000 ARS</h4>
-                <input type="radio" name="plan">
+                <input type="radio" name="plan" value="planInfinito">
                 <br>
                 <br>
             </article>
         </section>
+  
         <div class="botones">
             <button onclick="location.href='../index.html'" class="btn"><a class="link" href="../index.html">Cancelar</a></button>
-            <button onclick="location.href='../views/pagarSinLogin.html'" class="btn"><a class="link" href="../views/pagarSinLogin.html">Avanzar</a></button>
+            <button type="submit" class="btn">Avanzar</button>
         </div>
+        </form>
         
         <section class="item5 caja footer">
             <footer class="footer_container">
@@ -104,7 +107,7 @@
         </section>
     </section>
 
-    <script src="../main.js"></script>
+    <script src="../JS/premium.js"></script>
 
 </body>
 

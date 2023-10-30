@@ -105,20 +105,41 @@ estrelaBuscada.forEach(element => {
 }
 )
 // agrega la imagen al aside del album de la cancion  que tenga guardada en el localstoraje
+const imgContainersonando = document.querySelector(".contenedorAlbumDescripcion")
+const nombre_cancion = document.querySelectorAll(".nombre")
 
-const imgContainersonando=document.querySelector(".contenedorAlbumDescripcion")
-
+// aca si ya existe una musica sonando actualemte en el aside se agrega la imagen del album al que pertenece la cancion
 for (const usuario of usuariosRegistrados) {
 
     if (usuario.enLinea == true) {
-        const musicaActual=usuario.musicaActual
-        const arrayDescopuesto=musicaActual.split(":")
-        console.log(arrayDescopuesto);
-        if (usuario.musicaActual==="") {
+        const musicaActual = usuario.musicaActual
+
+        if (usuario.musicaActual === "") {
             console.log("Asd");
-        }else{
-            
-        const etiquetaAlbumSonando=`<div class="imgContainerSonando">
+        } else {
+            const arrayDescopuesto = musicaActual.split(":")
+            const etiquetaAlbumSonando = `<div class="imgContainerSonando">
+            <img src="../assets/${arrayDescopuesto[0]}.jpg" alt="" class="albumSonando">
+            <img src="../../assets/estrellaAmarilla.png" alt="" class="favAlbumSonando">
+        </div>
+        <div>
+            <p class="albumText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit omnis quaerat, eum
+                asperiores
+                nesciunt excepturi quae necessitatibus perspiciatis, voluptatibus veritatis amet, optio eos!
+                Reprehenderit a
+                ipsum fugit, vero expedita maiores.</p>
+        </div>`
+            imgContainersonando.innerHTML = etiquetaAlbumSonando
+        }
+
+        // aca agregamos el evento click  cada cancion,y reemplaza la imagen del aside por la imagen del album que pertenece la cancion
+        nombre_cancion.forEach(element => {
+            element.addEventListener("click", function () {
+                console.log("borrado");
+                const musicaActual = element.textContent
+                usuario.musicaActual=musicaActual
+                const arrayDescopuesto = musicaActual.split(":")
+                const etiquetaAlbumSonando = `<div class="imgContainerSonando">
         <img src="../assets/${arrayDescopuesto[0]}.jpg" alt="" class="albumSonando">
         <img src="../../assets/estrellaAmarilla.png" alt="" class="favAlbumSonando">
     </div>
@@ -129,14 +150,17 @@ for (const usuario of usuariosRegistrados) {
             Reprehenderit a
             ipsum fugit, vero expedita maiores.</p>
     </div>`
-    imgContainersonando.innerHTML=etiquetaAlbumSonando
-}
-const imgAlbumSonando=document.querySelector(".imgContainerSonando")
-imgAlbumSonando.addEventListener("click",function(){
-    imgContainersonando.innerHTML=""
-    console.log("borrado");
-    usuario.musicaActual=""
-    localStorage.setItem("usuarios",JSON.stringify( usuariosRegistrados));
-})
+                imgContainersonando.innerHTML = etiquetaAlbumSonando
+                localStorage.setItem("usuarios", JSON.stringify(usuariosRegistrados));
+            })
+        });
+        // aca al hacer click en la imagen,borrara todo el aside
+        const imagenAside=document.querySelector(".albumSonando")
+        
+        imgContainersonando.addEventListener("click",function () {
+            imgContainersonando.innerHTML=""
+            usuario.musicaActual=""
+            localStorage.setItem("usuarios", JSON.stringify(usuariosRegistrados))
+        })
     }
 }

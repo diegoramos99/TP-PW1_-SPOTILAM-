@@ -34,7 +34,7 @@
                 <img src="../assets/LogosPremium/nombre plan 2.png" alt="planAPagar">
             </article>
             <article class="plan">
-                <h4 class="titulo">Elegiste el plan NOMBRE DEL PLAN</h4>
+                <h4 class="titulo">Elegiste el: </h4>
                 <p>
                     Elegiste el mejor plan para vos y toda tu familia, no hay nada mejor que Lorem ipsum dolor sit amet
                     consectetur adipisicing elit. Vero id quo accusamus ut atque aut, harum magni aliquam
@@ -53,25 +53,25 @@
             </article>
         </section>
         <section class="form-content">
-            <form action="#" method="post" class="pago">
+            <form action="../views/perfilConIniciarSesion.html" method="get" class="pago">
                 <article class="item1">
                     <label>Numero de Tarjeta:</label>
-                    <input pattern="[0-9]{16}" name="numero" title="Incerte su numero de Tarjeta"
-                        placeholder="**** **** **** ****">
+                    <input id="NumeroTargeta" type="number" pattern="[0-9]{16}" name="numero" title="Incerte su numero de Tarjeta"
+                        placeholder="**** **** **** ****" min ="1000000000000000"max="10000000000000000" required>
                     <label>Nombre y Apellido</label>
-                    <input type="text" placeholder="Name">
+                    <input id="Nombre" type="text" placeholder="Name" required>
                 </article>
                 <article class="item2">
                     <label>VTO</label>
-                    <input pattern="[0-9]{4}" name="vencimiento"
-                        title="Incerte la fecha de vencimiento marcados en su Tarjeta" placeholder="**/**">
+                    <input id="VTO" type="date" pattern="[0-9]{4}" name="vencimiento"
+                        title="Incerte la fecha de vencimiento marcados en su Tarjeta" placeholder="**/**" required>
                     <label>CVC</label>
-                    <input pattern="[0-9]{3}" name="vencimiento" title="Incerte los 3 numeros en el dorso de su Tarjeta"
-                        placeholder="***">
+                    <input id="CVC" type="number"  min="001" max="998" pattern="[0-9]{3}" name="vencimiento" title="Incerte los 3 numeros en el dorso de su Tarjeta"
+                        placeholder="***" required>
                 </article>
                 <article class="botones">
                     <button class="btn"><a class="link" href="../views/premiumSinLogin.html">Cancelar</a></button>
-                    <button class="btn"><a class="link" href="../views/perfilConIniciarSesion.html">Pagar</a></button>
+                    <button id="pagar" class="btn">Pagar</button>
                 </article>
             </form>
         </section>
@@ -102,7 +102,7 @@
             </div>
         </footer>
     </section>
-    <script src="../main.js"></script>
+    <script src="../JS/pagar.js"></script>
 
 </body>
 

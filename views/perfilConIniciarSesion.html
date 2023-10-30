@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index1.css">
     <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="stylesheet" href="../css/loginRegister.css">
     <title>PerfilConCerrarSesion</title>
 </head>
 
@@ -29,30 +30,33 @@
     </section>
     <main>
         <section class="form-contenedor">
-            <form action="">
-                <p><label class="label" for="nombre">nombre</label>
-                    <input id="nombre" type="text" placeholder="ingrese su nombre">
-                </p>
-                <p> <label class="label" for="contraceña">contraceña</label>
-                    <input id="contraceña" type="password" placeholder="ingrese una contraceña">
-                </p>
-                <p><label class="label" for="repetir-contraceña">repetir-contraceña</label>
-                    <input id="repetir-contraceña" type="password" placeholder="repita contraceña">
-                </p>
-                <p><label class="label" for="fecha-nacimiento">fecha de nacimiento</label>
-                    <input id="fecha-nacimiento" type="date">
-                </p>
-                <p><label class="label" for="email">email</label>
-                    <input id="email" type="email" placeholder="ingrese email">
-                </p>
-                <div class="contenedor-btn">
-                    <button class="button"><a class="link" href="../index.html">registrarse a premium</a></button>
+            <form action="../views/login.html" method="get" class="login">
+                <div>
+                    <label id="label">Usuario</label>
+                    <input id="usuario" type="text" placeholder=" Name" value="" required >
+                </div>
+                <div>
+                    <label>Contraseña</label>
+                    <input id="contraceña" type="password" placeholder=" ********" required>
+                </div>
+                <div>
+                    <label>Repetir Contraseña</label>
+                    <input id="repetirContraceña" type="password" placeholder=" ********" required>
+                </div>
+                <div>
+                    <label>Email</label> 
+                    <input id="email" type="email" placeholder=" example@email.com" required>
+                </div>
+                <div>
+                    <label>Fecha de Nacimiento</label> 
+                    <input id="fechaNac" type="date" placeholder=" 00/00/0000" required>
+                </div>
                 
-                </div>
-                <div class="botones">
-                    <button  class="btn" ><a href="../views/pagarSinLogin.html">Volver </a></button>
-                    <!-- <button  class="btn" ><a href="../views/perfilConIniciarSesion.html">Guardar</a></button> -->
-                </div>
+                
+                
+                <!-- <button class="buttonLog">Registrarme</button> -->
+                <button  id="registrarme" type="submit" class="btn" name="btn" >registrarme </button>
+
             </form>
         </section>
 
@@ -83,7 +87,7 @@
             </div>
         </footer>
     </section>
-    <script src="../main.js"></script>
+    <script src="../JS/register.js"></script>
 
 </body>
 

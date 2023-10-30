@@ -32,30 +32,38 @@
         <section class="form-contenedor">
             <form action="">
                 <p><label class="label" for="nombre">nombre</label>
-                    <input id="nombre" type="text" placeholder="ingrese su nombre" required>
+                    <input id="nombre" type="text" placeholder="ingrese su nombre" >
                 </p>
                 <p> <label class="label" for="contraceña">contraceña</label>
-                    <input id="contraceña" type="password" placeholder="ingrese una contraceña" required>
+                    <input id="contraceña" type="password" placeholder="ingrese una contraceña" >
                 </p>
                 <p><label class="label" for="repetir-contraceña">repetir-contraceña</label>
-                    <input id="repetirContraceña" type="password" placeholder="repita contraceña" required>
+                    <input id="repetirContraceña" type="password" placeholder="repita contraceña" >
                 </p>
                 <p>
                     <label>Fecha de Nacimiento</label> 
-                    <input id="fechaNac"  placeholder="00/00/0000" type="date" required>
+                    <input id="fechaNac"  placeholder="00/00/0000" type="date" >
                 </p>
                 <p><label class="label" for="email">email</label>
-                    <input id="email" type="email" placeholder="ingrese email" required>
+                    <input id="email" type="email" placeholder="ingrese email" >
                 </p>
-                <div class="contenedor-btn">
-                    <button class="button"><a class="link" href="premium.html">premium</a></button>
-                    <button class="button"><a class="link" href="login.html">elimina usuario</a></button>
-                </div>
                 <div class="botones">
-                    <button class="btn"><a id="eliminarUsuario" class="link" href="../index.html">Volver al home</a></button>
+                    <button class="btn"><a id="" class="link" href="../index.html">Volver al home</a></button>
                     <button class="btn"><a id="guardar" class="link" href="../views/perfil.html">Guardar</a></button>
                 </div>
             </form>
+            <div class="contenedor-btn">
+                <button id="premium" class="button"><a class="link" href="premium.html">premium</a></button>
+                <button id="" class="button abrirDialogo"><a class="link" >elimina usuario</a></button>
+              
+
+                <dialog id="miDialogo" class="dialogo">
+                    <h2>seguro que deseas eliminar este perfil?</h2>
+                    <p>una vez eliminado se no hay manera de recuperar</p>
+                    <button id="eliminarUsuario" class="eliminarUsuario" href="login.html">si estoy seguro</button>
+                    <button class="cancelarEliminacion">cancelar</button>
+                </dialog>
+            </div>
         </section>
 
 

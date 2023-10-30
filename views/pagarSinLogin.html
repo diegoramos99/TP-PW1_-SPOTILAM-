@@ -20,7 +20,7 @@
                 <div class="header-perfil">
                     <div class="header-perfil_usuario">
                         <div class="usuario"><h3>usuario</h3></div>
-                        <div class="cerar-sesion"><a href="../views/login.html">cerrar sesion</a></div>
+                        <div class="cerar-sesion"><a id="cerrarSecion" href="../views/login.html">cerrar sesion</a></div>
                     </div>
                     <div class="header-perfil_contenedor-img">
                         <a href="../views/perfil.html">  <img src="../assets/foto-usuario.webp" alt=""></a>
@@ -35,7 +35,7 @@
                 <img src="../assets/LogosPremium/nombre plan 2.png" alt="planAPagar">
             </article>
             <article class="plan">
-                <h4 class="titulo">Elegiste el plan NOMBRE DEL PLAN</h4>
+                <h4 class="titulo">Elegiste el plan: </h4>
                 <p>
                     Elegiste el mejor plan para vos y toda tu familia, no hay nada mejor que Lorem ipsum dolor sit amet
                     consectetur adipisicing elit. Vero id quo accusamus ut atque aut, harum magni aliquam
@@ -54,27 +54,25 @@
             </article>
         </section>
         <section class="form-content">
-            <form action="#" method="post" class="pago">
+            <form action="../index.html" method="get" class="pago">
                 <article class="item1">
                     <label>Numero de Tarjeta:</label>
-                    <input pattern="[0-9]{16}" name="numero" title="Incerte su numero de Tarjeta"
-                        placeholder="**** **** **** ****">
+                    <input id="NumeroTargeta" type="number" pattern="[0-9]{16}" name="numero" title="Incerte su numero de Tarjeta"
+                        placeholder="**** **** **** ****" min ="1000000000000000"max="10000000000000000" required>
                     <label>Nombre y Apellido</label>
-                    <input type="text" placeholder="Name">
+                    <input id="Nombre" type="text" placeholder="Name" required>
                 </article>
                 <article class="item2">
                     <label>VTO</label>
-                    <input pattern="[0-9]{4}" name="vencimiento"
-                        title="Incerte la fecha de vencimiento marcados en su Tarjeta" placeholder="**/**">
+                    <input id="VTO" type="date" pattern="[0-9]{4}" name="vencimiento"
+                        title="Incerte la fecha de vencimiento marcados en su Tarjeta" placeholder="**/**" required>
                     <label>CVC</label>
-                    <input pattern="[0-9]{3}" name="vencimiento" title="Incerte los 3 numeros en el dorso de su Tarjeta"
-                        placeholder="***">
+                    <input id="CVC" type="number"  min="001" max="998" pattern="[0-9]{3}" name="vencimiento" title="Incerte los 3 numeros en el dorso de su Tarjeta"
+                        placeholder="***" required>
                 </article>
                 <article class="botones">
-                    <!-- <div class="btn" onclick="location.href='../views/perfilConIniciarSesion.html'">asd</div>
-                    <div class="btn" onclick="location.href='../views/perfil.html'">as</div> -->
                     <button onclick="location.href='../views/perfil.html'" class="btn"><a class="link" href="../views/perfil.html">Cancelar</a></button>
-                    <button onclick="location.href='../views/perfilConIniciarSesion.html'" class="btn"><a class="link" href="../views/perfilConIniciarSesion.html">Pagar</a></button>
+                    <button type="submit" id="pagar" class="btn">Pagar</button>
                 </article>
             </form>
         </section>
@@ -105,7 +103,7 @@
     </section>
     </section>
 
-    <script src="../main.js"></script>
+    <script src="../JS/pagarSinLogin.js"></script>
 
 </body>
 

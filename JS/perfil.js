@@ -2,7 +2,7 @@ const usuariosRegistrados = JSON.parse(localStorage.getItem("usuarios"))
 const cerarSecion = document.querySelector("#cerarSecion")
 
 
-// ---cambiar el nombr dde usuario por el del que inicio secion
+// ---cambiar el nombre de usuario por el del que inicio secion
 for (const usuario of usuariosRegistrados) {
     if (usuario.enLinea == true) {
         const nombreUsuario = document.querySelector(".usuario")
@@ -10,9 +10,15 @@ for (const usuario of usuariosRegistrados) {
         nombreUsuario.textContent = usuario.usuario
         // agregar los datos en los inputs desde el local starge
 
+        const contraceñaUsuario=usuario.nuevaContraceña
     
         const nombre=document.querySelector("#nombre").setAttribute("placeholder",usuario.usuario)
-        const contraceña=document.querySelector("#contraceña").setAttribute("placeholder",usuario.nuevaContraceña)
+        const mitadContraceña=Math.floor(contraceñaUsuario.length/2)
+        const segundaParte=contraceñaUsuario.slice(mitadContraceña)
+        const primeraParte=contraceñaUsuario.slice(0,mitadContraceña)
+        const contraceñaFinal=segundaParte+primeraParte
+        console.log(contraceñaFinal);
+        const contraceña=document.querySelector("#contraceña").setAttribute("placeholder",contraceñaFinal)
         const repetirContraceña=document.querySelector("#repetirContraceña").setAttribute("placeholder",usuario.repetirContraceña)
         const fechaNac=document.querySelector("#fechaNac").setAttribute("placeholder",usuario.fechaNac)
         const email=document.querySelector("#email").setAttribute("placeholder",usuario.email)
@@ -58,5 +64,51 @@ guardar.addEventListener("click",function(e){
    
 })
 
+// mostrar modal y eliminacion del perfil----------------------------------
+const eliminarUsuario=document.querySelector(".eliminarUsuario")
+const dialogo = document.querySelector('.dialogo');
+const botonAbrir = document.querySelector('.abrirDialogo');
+const cancelarEliminacion=document.querySelector(".cancelarEliminacion")
 
 
+
+
+
+botonAbrir.addEventListener('click', (event) => {
+    console.log("asd");
+    event.preventDefault()
+    dialogo.showModal();
+    dialogo.style.display="flex"
+    
+    
+});
+eliminarUsuario.addEventListener("click", ()=> {
+
+    dialogo.close();
+    for (const usuario of usuariosRegistrados) {
+            if (usuario.enLinea===true) {
+                    const indiceUsuarioAEliminar=usuariosRegistrados.indexOf(usuario)
+                    console.log(usuario);
+                    usuariosRegistrados.splice(indiceUsuarioAEliminar,1)
+                    location.href="../views/login.html"
+                }
+            }
+            localStorage.setItem("usuarios",JSON.stringify(usuariosRegistrados))
+})
+cancelarEliminacion.addEventListener("click",function(){
+    dialogo.close()
+    dialogo.style.display="none"
+    console.log("asdasad");
+})
+
+
+// si tiene premium elimina el buoton para comprarlo
+const premium=document.querySelector("#premium")
+
+for (const usuario of usuariosRegistrados) {
+    if (usuario.enLinea==true) {
+        if (usuario.tienePremium===true) {
+            premium.style.display="none"
+        }
+    }
+}
