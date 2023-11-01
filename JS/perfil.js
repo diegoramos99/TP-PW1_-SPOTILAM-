@@ -13,19 +13,19 @@ for (const usuario of usuariosRegistrados) {
         const contraceñaUsuario=usuario.nuevaContraceña
     
         const nombre=document.querySelector("#nombre").setAttribute("placeholder",usuario.usuario)
-        const mitadContraceña=Math.floor(contraceñaUsuario.length/2)
-        const segundaParte=contraceñaUsuario.slice(mitadContraceña)
-        const primeraParte=contraceñaUsuario.slice(0,mitadContraceña)
-        const contraceñaFinal=segundaParte+primeraParte
-        console.log(contraceñaFinal);
-        const contraceña=document.querySelector("#contraceña").setAttribute("placeholder",contraceñaFinal)
+        // const mitadContraceña=Math.floor(contraceñaUsuario.length/2)
+        // const segundaParte=contraceñaUsuario.slice(mitadContraceña)
+        // const primeraParte=contraceñaUsuario.slice(0,(mitadContraceña))
+        // const contraceñaFinal=segundaParte+primeraParte
+        // console.log(contraceñaFinal);
+        const contraceña=document.querySelector("#contraceña").setAttribute("placeholder",usuario.repetirContraceña)
         const repetirContraceña=document.querySelector("#repetirContraceña").setAttribute("placeholder",usuario.repetirContraceña)
         const fechaNac=document.querySelector("#fechaNac").setAttribute("placeholder",usuario.fechaNac)
         const email=document.querySelector("#email").setAttribute("placeholder",usuario.email)
         
     }
 }
-// pasar a falso el estado de enLinea del usuario cuando cierra secion 
+// pasar a falso el estado de enLinea del usuario cuando cierra sesion 
 cerarSecion.addEventListener("click", function () {
     for (const usuario of usuariosRegistrados) {
         if (usuario.enLinea == true) {
@@ -98,7 +98,7 @@ eliminarUsuario.addEventListener("click", ()=> {
 cancelarEliminacion.addEventListener("click",function(){
     dialogo.close()
     dialogo.style.display="none"
-    console.log("asdasad");
+  
 })
 
 

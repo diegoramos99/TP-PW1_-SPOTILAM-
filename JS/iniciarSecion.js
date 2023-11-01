@@ -16,17 +16,21 @@ function buscarUsuario() {
 
     // console.log(nuevaContraceña);
 
+    var numero=0;
     for (const usuario of usuariosRegistrados) {
-
         if (usuario.usuario===usuarioValue&&usuario.nuevaContraceña===nuevaContraceña) {
             usuario.enLinea=true;
             console.log("usuario correcto");
             window.location.href = "../index.html"
             break
+            }else{
+                numero++
             }
-            console.log("usuarioIncorecto");
+           
         }
-        alert("nombre o usuario incorrecto")
+        if (numero==usuariosRegistrados.length) {
+            alert("nombre de usuario o contraceña incorrecta")
+        }
             localStorage.setItem("usuarios",JSON.stringify( usuariosRegistrados));
 }
 
