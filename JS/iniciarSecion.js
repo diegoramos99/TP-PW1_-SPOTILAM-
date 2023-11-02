@@ -2,6 +2,8 @@ const iniciarSecion=document.querySelector("#iniciarSecion");
 const loginUsuario=document.querySelector(".Usuario");
 const logincontracenia=document.querySelector("#loginContracenia");
 
+const listaDeUsuariosLocalStorage=JSON.parse(localStorage.getItem("usuarios"))
+
 
 function buscarUsuario() {
     const usuariosRegistrados=JSON.parse(localStorage.getItem("usuarios"))
@@ -29,7 +31,7 @@ function buscarUsuario() {
            
         }
         if (numero==usuariosRegistrados.length) {
-            alert("nombre de usuario o contraceña incorrecta")
+            alert("el nombre de usuario o la contraceña es conincorrecta")
         }
             localStorage.setItem("usuarios",JSON.stringify( usuariosRegistrados));
 }
@@ -37,7 +39,13 @@ function buscarUsuario() {
 
 
 
-iniciarSecion.addEventListener("click",buscarUsuario)
-iniciarSecion.addEventListener("click",function(event){
-    event.preventDefault()
+
+iniciarSecion.addEventListener("click",function(){
+    if(listaDeUsuariosLocalStorage==null){
+        alert("debes registrarte primero")
+     }else{
+        iniciarSecion.addEventListener("click",buscarUsuario)
+
+     }
+   
 })

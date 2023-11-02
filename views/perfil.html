@@ -32,24 +32,24 @@
         <section class="form-contenedor">
             <form action="">
                 <p><label class="label" for="nombre">nombre</label>
-                    <input id="nombre" type="text" placeholder="ingrese su nombre" >
+                    <input id="nombre" type="text" placeholder="ingrese su nombre" required >
                 </p>
                 <p> <label class="label" for="contraceña">contraceña</label>
-                    <input id="contraceña" type="password" placeholder="ingrese una contraceña" >
+                    <input id="contraceña" type="password" placeholder="ingrese una contraceña" required>
                 </p>
                 <p><label class="label" for="repetir-contraceña">repetir-contraceña</label>
-                    <input id="repetirContraceña" type="password" placeholder="repita contraceña" >
+                    <input id="repetirContraceña" type="password" placeholder="repita contraceña" required>
                 </p>
                 <p>
                     <label>Fecha de Nacimiento</label> 
-                    <input id="fechaNac"  placeholder="00/00/0000" type="date" >
+                    <input id="fechaNac"  placeholder="00/00/0000" type="date" required>
                 </p>
                 <p><label class="label" for="email">email</label>
-                    <input id="email" type="email" placeholder="ingrese email" >
+                    <input id="email" type="email" placeholder="ingrese email" required>
                 </p>
                 <div class="botones">
                     <button class="btn"><a id="" class="link" href="../index.html">Volver al home</a></button>
-                    <button class="btn"><a id="guardar" class="link" href="../views/perfil.html">Guardar</a></button>
+                    <button id="guardar"  class="btn">Guardar</button>
                 </div>
             </form>
             <div class="contenedor-btn">

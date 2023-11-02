@@ -20,6 +20,7 @@ const cancionesFav=[];
 const albumsFav=[];
 const enLinea=false
 
+if (contraceña==repetirContraceña) {
 const usuarioNuevo={
     usuario:usuario,
     nuevaContraceña:nuevaContraceña,
@@ -35,6 +36,9 @@ const usuarioNuevo={
 listaDeUsuariosLocalStorage.push(usuarioNuevo)
 
 localStorage.setItem("usuarios",JSON.stringify(listaDeUsuariosLocalStorage));
+}else{
+    alert("las contraceñas no son iguales")
+}
 }
 
 

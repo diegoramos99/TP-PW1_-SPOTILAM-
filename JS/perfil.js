@@ -39,7 +39,7 @@ cerarSecion.addEventListener("click", function () {
 // guardar los datos ingrresados en los inputs de perfil
 
 const guardar=document.querySelector("#guardar")
-guardar.addEventListener("click",function(e){
+guardar.addEventListener("click",function(  ){
     // e.preventDefault()
     const nombre=document.querySelector("#nombre").value
         const contraceña=document.querySelector("#contraceña").value
@@ -51,16 +51,23 @@ guardar.addEventListener("click",function(e){
         const repetirContraceña=document.querySelector("#repetirContraceña").value
         const email=document.querySelector("#email").value
         const fechaNac=document.querySelector("#fechaNac").value
-        for (const usuario of usuariosRegistrados) {
-            if (usuario.enLinea == true) {
-                usuario.usuario=nombre
-                usuario.nuevaContraceña=contraceñaFinal
-                usuario.repetirContraceña=repetirContraceña
-                usuario.email=email
-                usuario.fechaNac=fechaNac
+
+        if (contraceña==repetirContraceña) {
+            
+            for (const usuario of usuariosRegistrados) {
+                if (usuario.enLinea == true) {
+                    usuario.usuario=nombre
+                    usuario.nuevaContraceña=contraceñaFinal
+                    usuario.repetirContraceña=repetirContraceña
+                    usuario.email=email
+                    usuario.fechaNac=fechaNac
+                }
             }
+            localStorage.setItem("usuarios",JSON.stringify(usuariosRegistrados))
+        }else{
+            alert("las contraceñas no son iguales")
         }
-        localStorage.setItem("usuarios",JSON.stringify(usuariosRegistrados))
+
    
 })
 
