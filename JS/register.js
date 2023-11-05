@@ -34,7 +34,7 @@ const usuarioNuevo={
     tienePremium:false
 }
 listaDeUsuariosLocalStorage.push(usuarioNuevo)
-
+alert(usuario+" tu registro fue exitoso")
 localStorage.setItem("usuarios",JSON.stringify(listaDeUsuariosLocalStorage));
 }else{
     alert("las contraceñas no son iguales")

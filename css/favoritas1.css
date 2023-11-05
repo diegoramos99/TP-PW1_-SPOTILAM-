@@ -122,6 +122,21 @@ img {
 .duracion {
     text-align: center;
 }
+.msjAlbumVacio{
+    position: absolute;
+    color: rgb(35, 29, 38);
+    border: 2px solid rgb(143, 143, 143);
+    height: 80%;
+    width: 80%;
+    background: linear-gradient(to bottom, #000000, #deddd9);
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    border-radius: 10%;
+}
+.msjAlbumVacio h2{
+    font-size: 200%;
+}
 
 @media(max-width:1377px) {
     .main_container {

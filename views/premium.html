@@ -20,7 +20,7 @@
                 <div class="header-perfil">
                     <div class="header-perfil_usuario">
                         <div class="usuario"><h3>usuario</h3></div>
-                        <div class="cerar-sesion"><a id="cerarSecion" href="../views/login.html">cerrar sesion</a></div>
+                        <div class="cerar-sesion"><a id="cerarSecion" href="../index.html">cerrar sesion</a></div>
                     </div>
                     <div class="header-perfil_contenedor-img">
                         <a href="../views/perfil.html">  <img src="../assets/foto-usuario.webp" alt=""></a>
@@ -41,7 +41,7 @@
                     <br>
                 </h3>
                 <h4>$1.330 ARS</h4>
-                <input type="radio" name="plan" value="planMensual">
+                <input id="opcion " type="radio" name="plan" value="planMensual">
                 <br>
             </article>
 
@@ -55,7 +55,7 @@
                     <br>
                 </h3>
                 <h4>$2.000 ARS</h4>
-                <input type="radio" name="plan" value="planAnual">
+                <input id="opcion" type="radio" name="plan" value="planAnual">
                 <br>
             </article>
 
@@ -69,17 +69,17 @@
                     <br>
                 </h3>
                 <h4>$8.000 ARS</h4>
-                <input type="radio" name="plan" value="planInfinito">
+                <input id="opcion" type="radio" name="plan" value="planInfinito">
                 <br>
                 <br>
             </article>
         </section>
   
         <div class="botones">
-            <button onclick="location.href='../index.html'" class="btn"><a class="link" href="../index.html">Cancelar</a></button>
-            <button type="submit" class="btn">Avanzar</button>
+            <di id="cancelar" class="btn">Cancelar</di>
+            <button id="avanzar" type="submit" class="btn" disabled>Avanzar</button>
         </div>
-        </form>
+    </form>
         
         <section class="item5 caja footer">
             <footer class="footer_container">

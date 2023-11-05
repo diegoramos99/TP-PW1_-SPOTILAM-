@@ -56,11 +56,21 @@ guardar.addEventListener("click",function(  ){
             
             for (const usuario of usuariosRegistrados) {
                 if (usuario.enLinea == true) {
-                    usuario.usuario=nombre
-                    usuario.nuevaContraceña=contraceñaFinal
-                    usuario.repetirContraceña=repetirContraceña
-                    usuario.email=email
-                    usuario.fechaNac=fechaNac
+                    console.log(usuario);
+                    if (nombre!=''&&contraceñaFinal!=''&&repetirContraceña!=''&&email!=''&&fechaNac!='') {
+                      if (repetirContraceña==contraceña) {
+                        alert("se registraron los datos")
+                        usuario.usuario=nombre
+                        usuario.nuevaContraceña=contraceñaFinal
+                        usuario.repetirContraceña=repetirContraceña
+                        usuario.email=email
+                        usuario.fechaNac=fechaNac
+                      }else{
+                        alert("las contraceñas no coinciden!,asegurate que las contraceñas sean identicas")
+                      }
+                    }else{
+                        alert("¡es necesario completar todos los datos!")
+                    }
                 }
             }
             localStorage.setItem("usuarios",JSON.stringify(usuariosRegistrados))
@@ -97,7 +107,7 @@ eliminarUsuario.addEventListener("click", ()=> {
                     const indiceUsuarioAEliminar=usuariosRegistrados.indexOf(usuario)
                     console.log(usuario);
                     usuariosRegistrados.splice(indiceUsuarioAEliminar,1)
-                    location.href="../views/login.html"
+                    location.href="../index.html"
                 }
             }
             localStorage.setItem("usuarios",JSON.stringify(usuariosRegistrados))

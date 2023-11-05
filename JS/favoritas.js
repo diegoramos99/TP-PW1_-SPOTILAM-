@@ -43,7 +43,6 @@ for (const usuario of usuariosRegistrados) {
         const contenedorCanciones=document.querySelector(".contenedor-datos-nombre") 
         const contenedorTiempo=document.querySelector(".contenedor-datos-tiempo") 
         const contenedorReproduccion=document.querySelector(".contenedor-datos-reproduccion") 
-        console.log(listaCancionesFav);
         listaCancionesFav.forEach(element => {
             const etiquetaCancionDOM=`<div class="nombre-cancion casilla"><img class="estrellaAmarilla fondo"
             src="../assets/estrella1.png" alt="${element}">
@@ -115,7 +114,6 @@ for (const usuario of usuariosRegistrados) {
         const musicaActual = usuario.musicaActual
 
         if (usuario.musicaActual === "") {
-            console.log("Asd");
         } else {
             const arrayDescopuesto = musicaActual.split(":")
             const etiquetaAlbumSonando = `<div class="imgContainerSonando">
@@ -162,5 +160,17 @@ for (const usuario of usuariosRegistrados) {
             usuario.musicaActual=""
             localStorage.setItem("usuarios", JSON.stringify(usuariosRegistrados))
         })
+        // agrega mensaje de que debe agregar a favoritas las canciones
+        const largoCancionesFav=usuario.cancionesFav
+        const largoAlbumsFav=usuario.albumsFav
+        if (largoCancionesFav.length==0 && largoAlbumsFav.length==0 ) {
+            const msjAlbumVacio=document.querySelector(".albumes-container")
+    
+  
+        const msj=`<div class="msjAlbumVacio"><h2>aun no se ha agregado ningun album o cancion a favoritos </h2></div>`
+        msjAlbumVacio.innerHTML=msj
+        console.log("assd");
+    
+        }
     }
 }

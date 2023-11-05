@@ -20,21 +20,26 @@ const cancionesFav=[];
 const albumsFav=[];
 const enLinea=false
 
-const usuarioNuevo={
-    usuario:usuario,
-    nuevaContraceña:nuevaContraceña,
-    repetirContraceña:repetirContraceña,
-    email:email,
-    fechaNac:fechaNac,
-    cancionesFav:cancionesFav,
-    albumsFav:albumsFav,
-    enLinea:enLinea,
-    musicaActual:"",
-    tienePremium:true
-}
-listaDeUsuariosLocalStorage.push(usuarioNuevo)
 
-localStorage.setItem("usuarios",JSON.stringify(listaDeUsuariosLocalStorage));
+if (contraceña==repetirContraceña) {
+    const usuarioNuevo={
+        usuario:usuario,
+        nuevaContraceña:nuevaContraceña,
+        repetirContraceña:repetirContraceña,
+        email:email,
+        fechaNac:fechaNac,
+        cancionesFav:cancionesFav,
+        albumsFav:albumsFav,
+        enLinea:enLinea,
+        musicaActual:"",
+        tienePremium:true
+    }
+    listaDeUsuariosLocalStorage.push(usuarioNuevo)
+    alert(usuario+" tu registro fue exitoso")
+    localStorage.setItem("usuarios",JSON.stringify(listaDeUsuariosLocalStorage));
+    }else{
+        alert("las contraceñas no son iguales")
+    }
 }
 
 

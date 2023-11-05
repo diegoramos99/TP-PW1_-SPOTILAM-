@@ -10,11 +10,34 @@ titulo.textContent+=nombrePlan
 const CVC=document.querySelector("#CVC")
 const numeroTargeta=document.querySelector("#NumeroTargeta")
 const pagar=document.querySelector("#pagar")
-pagar.addEventListener("click",function(){
-    console.log(numeroTargeta.value.length);
-        if (CVC.value>999||CVC.value<1 || numeroTargeta.value.length!=16) {
-            alert("algun valor es incorrecto,verifique que los detos hayan sido los correctos")
-        }else{
-         
+pagar.addEventListener("click",function(e){
+
+    console.log(CVC.value.length);
+
+    if (numeroTargeta.value.length!=16) {
+        alert("el numero de la targeta es invalido")
+        e.preventDefault()
+    }else{
+        if (CVC.value>999) {
+            alert("el valor del CVC es mayor a 999")
+            e.preventDefault()
+        }
+           else{
+            if (CVC.value.length!=3) {
+                alert("el CVC es incorrecto")
+                e.preventDefault()
+            }
+                else{
+                    for (const usuario of usuariosRegistrados) {
+                        if (usuario.enLinea===true) {
+                            usuario.tienePremium=true
+                            alert("compra exitosa,disfrute de: "+nombrePlan)
+                        }
+                     }
+
+                     localStorage.setItem("usuarios",JSON.stringify(usuariosRegistrados))
+            
+                }
+            }
         }
 })

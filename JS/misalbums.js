@@ -68,7 +68,6 @@ for (const usuario of usuariosRegistrados) {
         if (usuario.enLinea == true) {
             const albumesFavoritos=usuario.albumsFav    
             albumes.forEach(element => {
-                console.log(albumesFavoritos.includes(element.getAttribute("data-alt")));
                 if (albumesFavoritos.includes(element.getAttribute("data-alt"))) {   
                     const estrelaBuscada=element.querySelector(".favAlbumSonando")
                     estrelaBuscada.classList.add("fondo")
@@ -123,7 +122,7 @@ for (const usuario of usuariosRegistrados) {
         const musicaActual = usuario.musicaActual
 
         if (usuario.musicaActual === "") {
-            console.log("Asd");
+          
         } else {
             const arrayDescopuesto = musicaActual.split(":")
             const etiquetaAlbumSonando = `<div class="imgContainerSonando">
@@ -149,5 +148,20 @@ for (const usuario of usuariosRegistrados) {
             usuario.musicaActual=""
             localStorage.setItem("usuarios", JSON.stringify(usuariosRegistrados))
         })
+
+        // agrega mensaje al album si no ha seleccionado alguna aun
     }
 }
+function agregarMsj() {
+    const msjAlbumVacio=document.querySelector("#albumes-container")
+    
+    if (!msjAlbumVacio.hasChildNodes()) {
+        const msj=`<div class="msjAlbumVacio"><h2>aun no se ha agregado ningun album a favoritos </h2></div>`
+        msjAlbumVacio.innerHTML=msj
+        console.log("asd");
+    }
+}
+agregarMsj()
+
+
+

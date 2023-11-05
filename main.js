@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (usuario.enLinea == true) {
             const albumesFavoritos=usuario.albumsFav    
             albumes.forEach(element => {
-                console.log(albumesFavoritos.includes(element.getAttribute("data-alt")));
                 if (albumesFavoritos.includes(element.getAttribute("data-alt"))) {   
                     const estrelaBuscada=element.querySelector(".favAlbumSonando")
                     estrelaBuscada.classList.add("fondo")
@@ -89,7 +88,7 @@ for (const usuario of usuariosRegistrados) {
         const musicaActual = usuario.musicaActual
 
         if (usuario.musicaActual === "") {
-            console.log("Asd");
+      
         } else {
             const arrayDescopuesto = musicaActual.split(":")
             const etiquetaAlbumSonando = `<div class="imgContainerSonando">

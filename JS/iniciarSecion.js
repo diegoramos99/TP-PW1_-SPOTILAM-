@@ -23,7 +23,7 @@ function buscarUsuario() {
         if (usuario.usuario===usuarioValue&&usuario.nuevaContraceña===nuevaContraceña) {
             usuario.enLinea=true;
             console.log("usuario correcto");
-            window.location.href = "../index.html"
+            window.location.href = "../views/inicio.html"
             break
             }else{
                 numero++
@@ -31,7 +31,7 @@ function buscarUsuario() {
            
         }
         if (numero==usuariosRegistrados.length) {
-            alert("el nombre de usuario o la contraceña es conincorrecta")
+            alert("el nombre de usuario o la contraceña es incorrecta")
         }
             localStorage.setItem("usuarios",JSON.stringify( usuariosRegistrados));
 }
