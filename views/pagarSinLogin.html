@@ -15,7 +15,7 @@
         <section class="item1 caja header">
             <header class="header_container">
                 <div class="header-titulo">
-                    <h1>spotilam</h1>
+                    <h1>Spotilam</h1>
                 </div>
                 <div class="header-perfil">
                     <div class="header-perfil_usuario">
@@ -31,11 +31,11 @@
         </section>
 
         <section class="planeElegido">
-            <article>
+            <article class="planSeleccionado">
                 <img src="../assets/LogosPremium/nombre plan 2.png" alt="planAPagar">
             </article>
             <article class="plan">
-                <h4 class="titulo">Elegiste el plan: </h4>
+                <h2 class="titulo">Elegiste el: </h2>
                 <p>
                     Elegiste el mejor plan para vos y toda tu familia, no hay nada mejor que Lorem ipsum dolor sit amet
                     consectetur adipisicing elit. Vero id quo accusamus ut atque aut, harum magni aliquam
@@ -59,16 +59,20 @@
                     <label>Numero de Tarjeta:</label>
                     <input id="NumeroTargeta" type="number" pattern="^[0-9]{16}" name="numero" title="Incerte su numero de Tarjeta"
                         placeholder="**** **** **** ****" required>
+                      <span id="errorNumeroTargeta" class="error" ></span>
                     <label>Nombre y Apellido</label>
-                    <input id="Nombre" type="text" placeholder="Name" required>
+                    <input id="nombre" type="text" placeholder="Name" required>
+                    <span id="errorNombre"class="error"></span>
                 </article>
                 <article class="item2">
                     <label>VTO</label>
                     <input id="VTO" type="date"  name="vencimiento"
                         title="Incerte la fecha de vencimiento marcados en su Tarjeta" placeholder="**/**" required>
-                    <label>CVC</label>
+                    <span id="errorVTO"class="error"></span>
+                        <label>CVC</label>
                     <input id="CVC" type="number"  min="001" max="998" pattern="^[0-9]{3}" name="vencimiento" title="Incerte los 3 numeros en el dorso de su Tarjeta"
                         placeholder="***" required>
+                        <span id="errorCVC"class="error"></span>
                 </article>
                 <article class="botones">
                     <button onclick="location.href='../views/perfil.html'" class="btn">Cancelar</button>

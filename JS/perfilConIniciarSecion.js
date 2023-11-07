@@ -21,25 +21,41 @@ const albumsFav=[];
 const enLinea=false
 
 
-if (contraceña==repetirContraceña) {
-    const usuarioNuevo={
-        usuario:usuario,
-        nuevaContraceña:nuevaContraceña,
-        repetirContraceña:repetirContraceña,
-        email:email,
-        fechaNac:fechaNac,
-        cancionesFav:cancionesFav,
-        albumsFav:albumsFav,
-        enLinea:enLinea,
-        musicaActual:"",
-        tienePremium:true
-    }
-    listaDeUsuariosLocalStorage.push(usuarioNuevo)
-    alert(usuario+" tu registro fue exitoso")
-    localStorage.setItem("usuarios",JSON.stringify(listaDeUsuariosLocalStorage));
+if (usuario.length<5) {
+    alert("necesitas ingresar un nombre de usuario de al menos 5 letras")
+}else{
+    if (contraceña!=repetirContraceña || contraceña.length<10) {
+        alert("la contraceña debe ser mayor a 10 caracteres y debe ser igual a 'REPETIR CONTRACEÑA'")
+
     }else{
-        alert("las contraceñas no son iguales")
+        if (!email.includes("@")) {
+            alert("tu email debe contener '@'")
+
+        }else{
+            if (fechaNac==0) {
+                alert("debes completar el ultimo compo con tu fecha de nacimiento")
+
+            }else{
+                const usuarioNuevo={
+                    usuario:usuario,
+                    nuevaContraceña:nuevaContraceña,
+                    repetirContraceña:repetirContraceña,
+                    email:email,
+                    fechaNac:fechaNac,
+                    cancionesFav:cancionesFav,
+                    albumsFav:albumsFav,
+                    enLinea:enLinea,
+                    musicaActual:"",
+                    tienePremium:true
+                }
+                listaDeUsuariosLocalStorage.push(usuarioNuevo)
+                alert(usuario+" tu registro fue exitoso ya te puedes loguear!")
+                localStorage.setItem("usuarios",JSON.stringify(listaDeUsuariosLocalStorage));
+                location.href="../index.html"
+            }
+        }
     }
+}
 }
 
 

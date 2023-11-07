@@ -1,3 +1,4 @@
+
 .contenedor{
     display: flex;
     flex-direction: column;
@@ -89,42 +90,18 @@ form .item1 {
 label {
     color: white;
 }
-
+.error{
+    color: rgb(255, 0, 0);
+    /* -webkit-text-stroke: 1px #16ff0ad6; */
+    font-size: small;
+    letter-spacing: 2px;
+    
+}
 .footer{
     margin-top: 5rem;
 }
 @media (max-width:700px) {
-    /* .usuario {
-        margin: 0;
-    }
 
-    .usuario a {
-
-        font-size: x-small;
-        text-align: center;
-    }
-
-    .headerIndex {
-        justify-content: end;
-        margin: 10px;
-        height: 9rem;
-    }
-
-    .headerIndex h1 {
-        text-align: center;
-    } */
-
-    /* .fotoUsuario {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        padding: 5px;
-    }
-
-    .fotoUsuarioPremium {
-        height: 100%;
-        margin: 5px;
-    } */
 }
 
 @media(max-width:550px) {
@@ -142,15 +119,10 @@ label {
     .item2 {
         width: 80%;
     }
-
-
-    /* .footer-content {
-        flex-direction: column;
+    .pago .botones button {
+  
+        margin: auto;
     }
-
-    .footer-content .footer-nav {
-        margin: 0;
-    } */
 }
 
 @media(max-width:400px) {
@@ -163,6 +135,7 @@ label {
     .pago .botones button {
         display: flex;
         height: 3rem;
+        margin: auto;
     }
 
     .pago .botones button a {
