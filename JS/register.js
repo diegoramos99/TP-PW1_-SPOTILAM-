@@ -60,4 +60,4 @@ if (usuario.length<5) {
 
 registrarme.addEventListener('click',almacenarUsuarioNuevo)
 
-    localStorage.clear()
+    // localStorage.clear()
