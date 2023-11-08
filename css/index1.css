@@ -211,16 +211,18 @@ body {
 
 .main_container {
     width: 100%;
+    height: 80vh;
 }
 
 .albumes-container {
     padding: 1rem 0;
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
+    overflow: scroll;
+    margin: auto;
 }
 
 .albumes-container_container {
