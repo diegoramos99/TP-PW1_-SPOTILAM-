@@ -75,7 +75,6 @@ estrella.forEach(function(estrella){
 
 })
 
-// agrega la imagen al aside del album de la cancion  que tenga guardada en el localstoraje
 
 // agrega la imagen al aside del album de la cancion  que tenga guardada en el localstoraje
 const imgContainersonando = document.querySelector(".contenedorAlbumDescripcion")

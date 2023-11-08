@@ -9,10 +9,8 @@
     display: flex;
 }
 
-.link {}
-
 .btn {
-    background: linear-gradient(to right, #00ff5e, #0000ff);
+    background: linear-gradient(to right, #0000ff, #ffa200b1);
     border: 1px solid gray;
     color: rgb(255, 255, 255);
     width: 6rem;
@@ -23,9 +21,27 @@
     align-items: center;
 }
 
+input{
+
+    background-color: rgb(97, 97, 243);
+    height: 4vh;
+    color: rgb(13, 5, 5);
+    transition: all 1s;
+    border: none;
+}
+input::placeholder {
+    color: #464646; /* Cambia el color del marcador de posición a rojo (#ff0000) */
+  }
+input:focus{
+    background-color: none;
+ background-color: rgb(239, 164, 79);
+ color: #060301;
+ border: none;
+}
 .btn:hover {
     box-shadow: 0px 0px 5px white;
     cursor: pointer;
+outline: none;
 }
 
 .btn a {
@@ -36,18 +52,12 @@
 }
 
 body {
-    /* background-image: url(../assets/fondonegro.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-     */
+
     background: linear-gradient(to bottom, #ff3a3a, #0000ff);
 }
 
 .container {
-    /* background-color: rgb(247, 255, 17); */
-
     display: grid;
-
     grid-template-areas:
         "nav header header header header header header"
         "nav header header header header header header"
@@ -67,28 +77,7 @@ body {
     width: 100%;
     height: 100%;
     border: 2px solid black;
-    /* background-color: rgb(57, 128, 191); */
-}
 
-.header {
-    /* background-color: aqua; */
-}
-
-.nav {
-    /* background-color: blue; */
-
-}
-
-.main {
-    /* background-color: red; */
-}
-
-.aside {
-    /* background-color: green; */
-}
-
-.footer {
-    /* background-color: blueviolet; */
 }
 
 .item1 {
@@ -121,15 +110,9 @@ body {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    /* border: 2px solid rgb(255, 15, 15); */
-}
-
-.header_container>div {
-    /* border: 2px solid black; */
 }
 
 .header_container .header-titulo {
-    /* border: 2px solid rgb(173, 51, 7); */
     width: 100%;
     height: 100%;
     margin: auto;
@@ -142,23 +125,15 @@ body {
 }
 
 .header_container .header-buscador input {
-    /* border: 2px solid rgb(240, 240, 240); */
     border-radius: 20px;
     width: 100%;
     height: 100%;
 
 }
-
-.header_container>div {
-    /* border: 2px solid black; */
-}
-
 .header-perfil {
     display: flex;
     justify-content: end;
-
 }
-
 .header-perfil_usuario {
     display: flex;
     flex-direction: column;
@@ -173,15 +148,11 @@ body {
 }
 
 .header-perfil_contenedor-img {
-    /* border: 2px solid red; */
     width: 20%;
     margin: 0 1rem;
-    /* border-radius: 10%; */
-
 }
 
 .header-perfil_contenedor-img img {
-    /* border: 2px solid rgb(0, 0, 0); */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -195,7 +166,6 @@ body {
 }
 
 .menu {
-    /* border: 2px solid white; */
     height: 100%;
     width: 100%;
     background-color: rgb(62, 56, 234)
@@ -219,7 +189,7 @@ body {
 }
 
 .menu ul div:hover {
-    background-color: rgb(76, 167, 247);
+    background-color: rgb(182, 76, 247);
 
 }
 
@@ -236,18 +206,14 @@ body {
 
 /* ---------------donde esta los albums------------------------------------------- */
 .item3 {
-    /* border: 10px solid violet; */
     position: relative;
 }
 
 .main_container {
     width: 100%;
-    /* border: 10px solid rgb(251, 247, 13); */
-
 }
 
 .albumes-container {
-    /* border: 5px solid rgb(21, 243, 73); */
     padding: 1rem 0;
     width: 100%;
     height: 100%;
@@ -258,29 +224,21 @@ body {
 }
 
 .albumes-container_container {
-    /* border: 10px solid red; */
-
     width: 30%;
     height: 70%;
     margin: 1rem 0;
 }
 
 .albumes-container .imgContainer {
-    /* border: 5px solid rgb(4, 8, 233); */
     position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: end;
-
-
-
 }
 
 .albumes-container .imgContainer .imgAlbumes {
-    /* border: 5px solid rgb(6, 248, 236); */
     border: 2px solid rgb(211, 211, 211);
-
     width: 100%;
     height: 30vw;
     object-fit: cover;
@@ -288,13 +246,10 @@ body {
 }
 
 .albumes-container .imgContainer .favAlbumSonando {
-    /* border: 20px solid rgb(105, 14, 202); */
     position: absolute;
     width: 20%;
     height: 20%;
     object-fit: contain;
-
-
 }
 
 .albumes-container .imgContainer .favAlbumSonando:hover {
@@ -311,13 +266,11 @@ body {
 /* --------donde esta la descripcion de la cancion----------------------- */
 
 .contenedorAlbumDescripcion {
-    /* border: 5px solid blue; */
     width: 100%;
     height: 100%;
 }
 
 .contenedorAlbumDescripcion .imgContainerSonando {
-    /* border: 5px solid rgb(255, 0, 191); */
     position: relative;
     width: 100%;
     height: 50%;
@@ -327,14 +280,12 @@ body {
 }
 
 .contenedorAlbumDescripcion .imgContainerSonando .albumSonando {
-    /* border: 5px solid blue; */
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .contenedorAlbumDescripcion .imgContainerSonando .favAlbumSonando {
-    /* border: 5px solid rgb(6, 213, 61); */
     position: absolute;
     width: 10%;
     height: 10%;
@@ -342,7 +293,6 @@ body {
 }
 
 .contenedorAlbumDescripcion .imgContainerSonando .favAlbumSonando {
-    /* border: 5px solid rgb(6, 213, 61); */
     position: absolute;
     width: 20%;
     height: 20%;
@@ -356,10 +306,8 @@ body {
 /* --------------footer--------------------------------------- */
 
 .footer_container {
-    /* border: 5px solid rgb(247, 247, 247); */
     display: flex;
     flex-direction: column;
-    /* background: linear-gradient(to bottom, #ff00ff, #0000ff); */
     background-color: black;
 }
 
@@ -411,12 +359,10 @@ body {
 
     /* -------------------NAV--------------------- */
     .menu {
-        /* border: 10px solid white; */
         height: 10vh;
     }
 
     .menu ul {
-        /* border: 5px solid red; */
         flex-direction: row;
     }
 
@@ -427,17 +373,14 @@ body {
 
     /* .---------------Main--------------- */
     .albumes-container_container {
-        /* border: 10px solid violet; */
         width: 40%;
     }
 
     .albumes-container .imgContainer {
-        /* border: 5px solid red; */
         width: 80%;
     }
 
     .albumes-container .imgContainer .imgAlbumes {
-        /* border: 5px solid rgb(6, 248, 236); */
         border: 2px solid rgb(211, 211, 211);
 
         width: 120%;
@@ -449,16 +392,13 @@ body {
     .contenedorAlbumDescripcion {
         display: flex;
         flex-direction: row;
-        /* border: 2px solid red; */
     }
 
     .contenedorAlbumDescripcion .imgContainerSonando {
-        /* border: 2px solid green; */
         height: 100%;
     }
 
     .contenedorAlbumDescripcion p {
-        /* border: 2px solid green; */
         height: 100%;
         margin: auto;
         text-align: justify;
@@ -494,7 +434,6 @@ body {
 
     /* -------------header------------- */
     .header-perfil_contenedor-img {
-        /* border: 2px solid red; */
         width: 30%;
         margin: 0 1rem;
 
@@ -502,7 +441,6 @@ body {
     }
 
     .albumes-container_container {
-        /* border: 5px solid violet; */
         width: 90%;
         display: flex;
         justify-content: center;
@@ -511,13 +449,11 @@ body {
     }
 
     .albumes-container_container .imgAlbumes {
-        /* border: 5px solid rgb(211, 211, 211); */
         width: 100px;
 
     }
 
     .albumes-container_container {
-        /* border: 10px solid rgb(130, 238, 146); */
         width: 90%;
         height: 100%;
     }
@@ -530,12 +466,8 @@ body {
     }
 
     .albumes-container .imgContainer .imgAlbumes {
-        /* border: 5px solid rgb(6, 248, 236); */
-        /* border: 2px solid rgb(211, 211, 211); */
-
         width: 100%;
         height: 100%;
-
         object-fit: cover;
     }
 

@@ -31,7 +31,6 @@ body {
 }
 .error{
     color: rgb(242, 5, 5);
-    /* -webkit-text-stroke: 1px #16ff0ad6; */
     font-size: small;
     letter-spacing: 2px;
     
@@ -40,7 +39,6 @@ body {
 
 
 .form-contenedor {
-    /* border: 5px solid white;  */
     height: 80vh;
     display: flex;
     flex-direction: column;
@@ -61,7 +59,6 @@ dialog{
         align-items: center;
 }
 .form-contenedor form {
-    /* border: 5px solid white; */
 
     width: 50%;
     height: 100%;
@@ -90,7 +87,6 @@ dialog{
 }
 
 .form-contenedor form>p {
-    /* border: 5px solid white; */
     color: #f2f2f2;
     width: 50%;
     text-align: center;
@@ -103,7 +99,6 @@ dialog{
 }
 
 .form-contenedor form p>input {
-    /* border: 5px solid rgb(255, 0, 0); */
     text-align: center;
     width: 100%;
     min-width: 100px;
@@ -137,7 +132,6 @@ dialog{
     .botones {
         display: flex;
         flex-direction: column;
-        /* border: 2px solid red; */
         width: 70%;
     }
     .btn{

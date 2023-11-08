@@ -92,7 +92,6 @@ label {
 }
 .error{
     color: rgb(255, 0, 0);
-    /* -webkit-text-stroke: 1px #16ff0ad6; */
     font-size: small;
     letter-spacing: 2px;
     

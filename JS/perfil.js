@@ -13,11 +13,7 @@ for (const usuario of usuariosRegistrados) {
         const contraceñaUsuario=usuario.nuevaContraceña
     
         const nombre=document.querySelector("#nombre").setAttribute("placeholder",usuario.usuario)
-        // const mitadContraceña=Math.floor(contraceñaUsuario.length/2)
-        // const segundaParte=contraceñaUsuario.slice(mitadContraceña)
-        // const primeraParte=contraceñaUsuario.slice(0,(mitadContraceña))
-        // const contraceñaFinal=segundaParte+primeraParte
-        // console.log(contraceñaFinal);
+
         const contraceña=document.querySelector("#contraceña").setAttribute("placeholder",usuario.repetirContraceña)
         const repetirContraceña=document.querySelector("#repetirContraceña").setAttribute("placeholder",usuario.repetirContraceña)
         const fechaNac=document.querySelector("#fechaNac").setAttribute("placeholder",usuario.fechaNac)
@@ -40,7 +36,6 @@ cerarSecion.addEventListener("click", function () {
 
 const guardar=document.querySelector("#guardar")
 guardar.addEventListener("click",function(){
-    // e.preventDefault()
     const nombre=document.querySelector("#nombre").value
         const contraceña=document.querySelector("#contraceña").value
         const mitadContraceña=Math.floor(contraceña.length/2)

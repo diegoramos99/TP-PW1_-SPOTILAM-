@@ -4,14 +4,12 @@ img {
 }
 
 .main_container {
-    /* border: 5px solid red; */
     width: 80vw;
     height: 80vh;
     margin: auto;
 }
 
 .albumes-container {
-    /* border: 5px solid green; */
     width: 100%;
     height: 80%;
     display: flex;
@@ -24,13 +22,10 @@ img {
 .campo {
     width: 100%;
     height: 5vh;
-    /* background-color: aqua; */
-    /* border: 5px solid greenyellow; */
     text-align: center;
 }
 
 .casilla {
-    /* border: 4px solid red; */
     position: relative;
     display: flex;
     justify-content: center;
@@ -41,12 +36,9 @@ img {
     font-size: x-large;
 }
 .icono{
-    /* border: 2px solid red; */
     height: 8vh
 }
 .estrellaAmarilla {
-    /* border: 1px solid green; */
-
     justify-self: end;
     z-index: 1;
 }
@@ -64,12 +56,10 @@ img {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    /* border: 2px solid white; */
     height: 8vh;
 }
 
 .columnas {
-    /* border: 5px solid blue; */
     width: 20%;
     height: 160%;
     display: flex;
@@ -82,7 +72,6 @@ img {
 .contenedor-datos-nombre,
 .contenedor-datos-reproduccion,
 .contenedor-datos-tiempo {
-    /* border: 5px solid rgb(0, 166, 255); */
     margin: 2%;
     display: flex;
     flex-direction: column;
@@ -107,7 +96,6 @@ img {
 
 .nombre-album {
     margin: 0;
-    /* border: 2px solid red; */
     text-align: center;
     width: 100%;
     height: 10%;
@@ -140,7 +128,6 @@ img {
 
 @media(max-width:1377px) {
     .main_container {
-        /* border: 5px solid red; */
         width: 100%;
         height: 80vh;
         margin: auto;
