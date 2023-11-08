@@ -39,7 +39,7 @@ cerarSecion.addEventListener("click", function () {
 // guardar los datos ingrresados en los inputs de perfil
 
 const guardar=document.querySelector("#guardar")
-guardar.addEventListener("click",function(  ){
+guardar.addEventListener("click",function(){
     // e.preventDefault()
     const nombre=document.querySelector("#nombre").value
         const contraceña=document.querySelector("#contraceña").value
@@ -47,36 +47,101 @@ guardar.addEventListener("click",function(  ){
         const segundaParte=contraceña.slice(mitadContraceña)
         const primeraParte=contraceña.slice(0,mitadContraceña)
         const contraceñaFinal=segundaParte+primeraParte
-        console.log(contraceñaFinal);
+
         const repetirContraceña=document.querySelector("#repetirContraceña").value
         const email=document.querySelector("#email").value
         const fechaNac=document.querySelector("#fechaNac").value
 
-        if (contraceña==repetirContraceña) {
-            
-            for (const usuario of usuariosRegistrados) {
-                if (usuario.enLinea == true) {
-                    console.log(usuario);
-                    if (nombre!=''&&contraceñaFinal!=''&&repetirContraceña!=''&&email!=''&&fechaNac!='') {
-                      if (repetirContraceña==contraceña) {
-                        alert("se registraron los datos")
-                        usuario.usuario=nombre
-                        usuario.nuevaContraceña=contraceñaFinal
-                        usuario.repetirContraceña=repetirContraceña
-                        usuario.email=email
-                        usuario.fechaNac=fechaNac
-                      }else{
-                        alert("las contraceñas no coinciden!,asegurate que las contraceñas sean identicas")
-                      }
+
+        const errorNombre=document.querySelector("#errorNombre")
+        const errorContraceña=document.querySelector("#errorContraceña")
+        const errorRepetirContraceña=document.querySelector("#errorRepetirContraceña")
+        const errorEmail=document.querySelector("#errorEmail")
+        const errorFechaNac=document.querySelector("#errorFechaNac")
+
+        if (nombre.length<5) {
+            errorNombre.textContent=""
+            errorContraceña.textContent=""
+            errorEmail.textContent=""
+            errorFechaNac.textContent=""
+            errorRepetirContraceña.textContent=""
+            errorNombre.textContent=""
+            errorNombre.textContent="Necesitas ingresar un nombre de usuario de al menos 5 caracteres"
+        }else{
+            if (contraceña.length<10) {
+                errorNombre.textContent=""
+                errorContraceña.textContent=""
+                errorEmail.textContent=""
+                errorFechaNac.textContent=""
+                errorRepetirContraceña.textContent=""
+                errorNombre.textContent=""
+                errorContraceña.textContent="La contraceña debe ser mayor a 10 caracteres "
+            }else{
+                if (contraceña!=repetirContraceña) {
+                    errorNombre.textContent=""
+                    errorContraceña.textContent=""
+                    errorEmail.textContent=""
+                    errorFechaNac.textContent=""
+                    errorRepetirContraceña.textContent=""
+                    errorNombre.textContent=""
+                    errorRepetirContraceña.textContent="La cantraceña no es identica"
+                }else{
+                if (fechaNac==0) {
+                    errorNombre.textContent=""
+                    errorContraceña.textContent=""
+                    errorEmail.textContent=""
+                    errorFechaNac.textContent=""
+                    errorRepetirContraceña.textContent=""
+                    errorNombre.textContent=""
+                    errorFechaNac.textContent="Debes ingresar una fecha de nacimiento"
+                }else{
+                    
+                    if (email.length<4) {
+                        errorNombre.textContent=""
+                        errorContraceña.textContent=""
+                        errorEmail.textContent=""
+                        errorFechaNac.textContent=""
+                        errorRepetirContraceña.textContent=""
+                        errorNombre.textContent=""
+                        errorEmail.textContent="Este tipo de Email no es admitido"
                     }else{
-                        alert("¡es necesario completar todos los datos!")
+                        if (!email.includes("@")) {
+                            errorNombre.textContent=""
+                            errorContraceña.textContent=""
+                            errorEmail.textContent=""
+                            errorFechaNac.textContent=""
+                            errorRepetirContraceña.textContent=""
+                            errorNombre.textContent=""
+                            errorEmail.textContent="El email debe tener '@'"
+                        }else{
+                            for (const usuario of usuariosRegistrados) {
+                                if (usuario.enLinea == true) {
+                                    errorNombre.textContent=""
+                                    errorContraceña.textContent=""
+                                    errorEmail.textContent=""
+                                    errorFechaNac.textContent=""
+                                    errorRepetirContraceña.textContent=""
+                                    errorNombre.textContent=""
+                                        alert("se registraron todos los datos con exito")
+                                        usuario.usuario=nombre
+                                        usuario.nuevaContraceña=contraceñaFinal
+                                        usuario.repetirContraceña=repetirContraceña
+                                        usuario.email=email
+                                        usuario.fechaNac=fechaNac
+                                }
+                            }
+                        }
                     }
                 }
+                }
             }
-            localStorage.setItem("usuarios",JSON.stringify(usuariosRegistrados))
-        }else{
-            alert("las contraceñas no son iguales")
         }
+
+      
+            
+           
+            localStorage.setItem("usuarios",JSON.stringify(usuariosRegistrados))
+        
 
    
 })

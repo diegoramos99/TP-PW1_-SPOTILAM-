@@ -33,20 +33,24 @@
             <form action="">
                 <p><label class="label" for="nombre">nombre</label>
                     <input id="nombre" type="text" placeholder="ingrese su nombre" required >
-                
+                    <span id="errorNombre" class="errorRojo"></span>
                 </p>
                 <p> <label class="label" for="contraceña">contraceña</label>
                     <input id="contraceña" type="password" placeholder="ingrese una contraceña" required>
+                    <span id="errorContraceña" class="error"></span>
                 </p>
                 <p><label class="label" for="repetir-contraceña">repetir-contraceña</label>
                     <input id="repetirContraceña" type="password" placeholder="repita contraceña" required>
+                    <span id="errorRepetirContraceña"class="error"></span>
                 </p>
                 <p>
                     <label>Fecha de Nacimiento</label> 
                     <input id="fechaNac"  placeholder="00/00/0000" type="date" required>
+                    <span id="errorFechaNac"class="error"></span>
                 </p>
                 <p><label class="label" for="email">email</label>
                     <input id="email" type="email" placeholder="ingrese email" required>
+                    <span id="errorEmail"class="error"></span>
                 </p>
                 <div class="botones">
                     <button class="btn"><a id="" class="link" href="../views/inicio.html">Volver al home</a></button>

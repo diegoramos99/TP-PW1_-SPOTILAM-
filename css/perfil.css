@@ -26,7 +26,16 @@
 body {
     background-color: #f2f2f2;
 }
-
+.errorRojo{
+    color: #060301;
+}
+.error{
+    color: rgb(242, 5, 5);
+    /* -webkit-text-stroke: 1px #16ff0ad6; */
+    font-size: small;
+    letter-spacing: 2px;
+    
+}
 
 
 

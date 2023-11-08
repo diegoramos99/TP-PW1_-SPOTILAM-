@@ -20,7 +20,7 @@ const cancionesFav=[];
 const albumsFav=[];
 const enLinea=false
 if (usuario.length<5) {
-    alert("necesitas ingresar un nombre de usuario de al menos 5 letras")
+    alert("Necesitas ingresar un nombre de usuario de al menos 5 caracteres")
 }else{
     if (contraceña!=repetirContraceña || contraceña.length<10) {
         alert("la contraceña debe ser mayor a 10 caracteres y debe ser igual a 'REPETIR CONTRACEÑA'")
@@ -60,4 +60,4 @@ if (usuario.length<5) {
 
 registrarme.addEventListener('click',almacenarUsuarioNuevo)
 
-    // localStorage.clear()
+    localStorage.clear()
