@@ -53,7 +53,7 @@ pagar.addEventListener("click",function(e){
                 errorVTO.innerText="debe completar este campo con la fecha de vencimiento"
             }else{
 
-                if (CVC.value>999|| CVC.value<1) {
+                if (CVC.value>=999|| CVC.value<1) {
                     errorTargeta.innerText=''
                 errorVTO.innerText=''
                 errorNombre.innerText=''
