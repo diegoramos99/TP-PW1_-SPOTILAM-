@@ -12,12 +12,12 @@ for (const usuario of usuariosRegistrados) {
 
         const contraceñaUsuario=usuario.nuevaContraceña
     
-        const nombre=document.querySelector("#nombre").setAttribute("placeholder",usuario.usuario)
+        const nombre=document.querySelector("#nombre").setAttribute("value",usuario.usuario)
 
-        const contraceña=document.querySelector("#contraceña").setAttribute("placeholder",usuario.repetirContraceña)
-        const repetirContraceña=document.querySelector("#repetirContraceña").setAttribute("placeholder",usuario.repetirContraceña)
-        const fechaNac=document.querySelector("#fechaNac").setAttribute("placeholder",usuario.fechaNac)
-        const email=document.querySelector("#email").setAttribute("placeholder",usuario.email)
+        const contraceña=document.querySelector("#contraceña").setAttribute("value",usuario.repetirContraceña)
+        const repetirContraceña=document.querySelector("#repetirContraceña").setAttribute("value",usuario.repetirContraceña)
+        const fechaNac=document.querySelector("#fechaNac").setAttribute("value",usuario.fechaNac)
+        const email=document.querySelector("#email").setAttribute("value",usuario.email)
         
     }
 }
@@ -55,40 +55,45 @@ guardar.addEventListener("click",function(){
         const errorFechaNac=document.querySelector("#errorFechaNac")
 
         if (nombre.length<5) {
+            alert("Necesitas ingresar un nombre de usuario de al menos 5 caracteres")
             errorNombre.textContent=""
             errorContraceña.textContent=""
             errorEmail.textContent=""
             errorFechaNac.textContent=""
             errorRepetirContraceña.textContent=""
             errorNombre.textContent=""
-            errorNombre.textContent="Necesitas ingresar un nombre de usuario de al menos 5 caracteres"
+            // errorNombre.textContent="Necesitas ingresar un nombre de usuario de al menos 5 caracteres"
         }else{
             if (contraceña.length<10) {
+                alert("La contraceña debe ser mayor a 10 caracteres")
                 errorNombre.textContent=""
                 errorContraceña.textContent=""
                 errorEmail.textContent=""
                 errorFechaNac.textContent=""
                 errorRepetirContraceña.textContent=""
                 errorNombre.textContent=""
-                errorContraceña.textContent="La contraceña debe ser mayor a 10 caracteres "
+                // errorContraceña.textContent="La contraceña debe ser mayor a 10 caracteres "
             }else{
                 if (contraceña!=repetirContraceña) {
+                    alert("La cantraceña no es identica")
                     errorNombre.textContent=""
                     errorContraceña.textContent=""
                     errorEmail.textContent=""
                     errorFechaNac.textContent=""
                     errorRepetirContraceña.textContent=""
                     errorNombre.textContent=""
-                    errorRepetirContraceña.textContent="La cantraceña no es identica"
+                    // errorRepetirContraceña.textContent="La cantraceña no es identica"
                 }else{
                 if (fechaNac==0) {
+
+                    alert("Debes ingresar una fecha de nacimiento")
                     errorNombre.textContent=""
                     errorContraceña.textContent=""
                     errorEmail.textContent=""
                     errorFechaNac.textContent=""
                     errorRepetirContraceña.textContent=""
                     errorNombre.textContent=""
-                    errorFechaNac.textContent="Debes ingresar una fecha de nacimiento"
+                    // errorFechaNac.textContent="Debes ingresar una fecha de nacimiento"
                 }else{
                     
                     if (email.length<4) {
@@ -98,16 +103,17 @@ guardar.addEventListener("click",function(){
                         errorFechaNac.textContent=""
                         errorRepetirContraceña.textContent=""
                         errorNombre.textContent=""
-                        errorEmail.textContent="Este tipo de Email no es admitido"
+                        // errorEmail.textContent="Este tipo de Email no es admitido"
                     }else{
                         if (!email.includes("@")) {
+                            alert("Este tipo de Email no es admitido")
                             errorNombre.textContent=""
                             errorContraceña.textContent=""
                             errorEmail.textContent=""
                             errorFechaNac.textContent=""
                             errorRepetirContraceña.textContent=""
                             errorNombre.textContent=""
-                            errorEmail.textContent="El email debe tener '@'"
+                            // errorEmail.textContent="El email debe tener '@'"
                         }else{
                             for (const usuario of usuariosRegistrados) {
                                 if (usuario.enLinea == true) {
