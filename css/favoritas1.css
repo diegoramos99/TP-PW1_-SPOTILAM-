@@ -2,7 +2,9 @@ img {
     width: 20%;
     height: 100%;
 }
-
+.header-titulo h1{
+    font-size: 2rem;
+}
 .main_container {
     width: 80vw;
     height: 80vh;
